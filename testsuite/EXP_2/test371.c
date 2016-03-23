@@ -1,1312 +1,2622 @@
+
+/*
+CF3
+
+Copyright (c) 2015 ishiura-lab.
+
+Released under the MIT license.  
+https://github.com/ishiura-compiler/CF3/MIT-LICENSE.md
+*/
+
 #include<stdio.h>
 #include<stdint.h>
 #include<stdlib.h>
 #include"test1.h"
 
-uint16_t x18 = 27268U;
-uint64_t t0 = 10759056259LLU;
-volatile int64_t x53 = -3LL;
-uint64_t x54 = 3879460LLU;
-int64_t x55 = INT64_MAX;
-uint32_t x117 = 4533U;
-int8_t x119 = INT8_MIN;
-int64_t x121 = INT64_MAX;
-static uint16_t x188 = 11U;
-int32_t x471 = -1;
-int64_t x535 = 63461732409781552LL;
-uint64_t x536 = 12LLU;
+uint16_t x3 = UINT16_MAX;
+volatile int16_t x17 = INT16_MIN;
+int32_t t2 = 37161676;
+int32_t x25 = INT32_MAX;
+uint8_t x31 = UINT8_MAX;
+static uint16_t x37 = 3U;
+int32_t x38 = -21;
+static int8_t x41 = INT8_MIN;
+volatile int32_t t7 = -3001;
+static uint8_t x46 = 14U;
+volatile int16_t x49 = INT16_MIN;
+int16_t x52 = INT16_MIN;
+volatile int32_t t9 = -1;
+int64_t x55 = -108157242474LL;
+uint8_t x59 = 2U;
+uint64_t x65 = 57058112400704LLU;
+int32_t t13 = -495937919;
+volatile uint32_t x77 = 876U;
+int32_t x93 = INT32_MIN;
+volatile int32_t t17 = -61069;
+int16_t x109 = -1;
+volatile int32_t t21 = -804318417;
+int16_t x121 = -1;
+int32_t x122 = -1;
+int8_t x126 = INT8_MAX;
+static volatile int32_t t26 = 1863305;
+uint8_t x133 = 50U;
+volatile int32_t x137 = INT32_MIN;
+static int32_t x141 = INT32_MIN;
+int64_t x142 = 6LL;
+volatile int32_t t29 = -50;
+volatile int32_t t30 = -14035;
+uint16_t x153 = 6493U;
+uint64_t x154 = 20426LLU;
+uint8_t x155 = 29U;
+int64_t x184 = INT64_MIN;
+int16_t x200 = INT16_MIN;
+int32_t x202 = INT32_MIN;
+uint64_t x212 = 6128860444589913LLU;
+int32_t x218 = INT32_MIN;
+int8_t x221 = INT8_MIN;
+int32_t t45 = 386;
+int64_t x249 = INT64_MIN;
+volatile int32_t t50 = 432647;
+int8_t x257 = -1;
+volatile uint32_t x262 = 16U;
+static uint64_t x266 = 764783131755LLU;
+static volatile int32_t x269 = INT32_MIN;
+static volatile int16_t x272 = INT16_MAX;
+int32_t x273 = INT32_MAX;
+static int32_t x274 = -1806;
+int32_t x288 = INT32_MIN;
+int32_t t59 = 1;
+int16_t x304 = INT16_MIN;
+int16_t x323 = 732;
+int8_t x326 = INT8_MIN;
+volatile int16_t x332 = INT16_MIN;
+static volatile int32_t t68 = -1192;
+int64_t x335 = INT64_MAX;
+uint32_t x347 = 138844323U;
+int32_t x355 = INT32_MIN;
+int8_t x361 = -1;
+uint16_t x368 = 14175U;
+volatile int32_t t75 = 460;
+volatile int32_t t78 = 1;
+int32_t x386 = INT32_MAX;
+volatile int32_t t80 = -145207429;
+static volatile int64_t x389 = -1LL;
+uint32_t x391 = 228640U;
+uint32_t x403 = 6654144U;
+volatile int32_t t84 = 0;
+volatile int32_t t85 = 6215;
+static int16_t x416 = -1;
+static int32_t x417 = INT32_MIN;
+static uint32_t x421 = 101509930U;
+static volatile int32_t t88 = 104;
+int32_t x425 = -1;
+volatile int32_t t93 = 61466986;
+int64_t x445 = -1LL;
+int32_t x453 = 65333;
+uint32_t x454 = 825063645U;
+int16_t x457 = INT16_MAX;
+static int16_t x459 = INT16_MIN;
+static int64_t x460 = 3477LL;
+uint8_t x476 = 103U;
+int8_t x481 = -2;
+volatile int64_t x487 = 17753425LL;
+volatile uint64_t x488 = UINT64_MAX;
+volatile int16_t x511 = -1;
+static uint16_t x514 = 5194U;
+uint32_t x520 = 833907492U;
+static int64_t x523 = -408305LL;
+uint16_t x524 = 93U;
+uint64_t x527 = 136356947175LLU;
+volatile int32_t t111 = 2;
+int16_t x534 = 341;
+uint8_t x545 = 15U;
+int8_t x547 = -1;
+int64_t x553 = INT64_MIN;
+static uint32_t x556 = UINT32_MAX;
+static uint64_t x562 = UINT64_MAX;
+int64_t x564 = INT64_MIN;
+int8_t x570 = -3;
+static int32_t t121 = 3;
+uint8_t x575 = 55U;
+int32_t t122 = 1247113;
+static int16_t x580 = -1;
+static volatile int32_t t123 = -26259533;
+int32_t t124 = 1123;
+static uint64_t x591 = 1443741445534341942LLU;
+volatile int64_t x592 = INT64_MIN;
+volatile int32_t t126 = -139;
+int8_t x594 = 0;
 static volatile uint32_t x603 = UINT32_MAX;
-int8_t x627 = -1;
-static int32_t t11 = 122593;
-static volatile int64_t t13 = -3LL;
-volatile int32_t x781 = 29395585;
-static uint32_t x782 = 239U;
-uint64_t x952 = 4LLU;
-uint8_t x1024 = 24U;
-volatile uint8_t x1030 = UINT8_MAX;
-int16_t x1136 = 11;
-static uint64_t t23 = 1422609026LLU;
-int32_t x1229 = 897974577;
-int64_t x1230 = -9103786280371909LL;
-volatile uint16_t x1232 = 13U;
-int8_t x1268 = 3;
-int16_t x1327 = INT16_MIN;
-volatile int64_t t28 = 1039794LL;
-static uint32_t x1422 = 978U;
-volatile uint64_t x1731 = UINT64_MAX;
-uint16_t x1756 = 7U;
-uint32_t x1821 = 24740186U;
-uint64_t x1823 = 6999400464LLU;
-static uint8_t x1824 = 16U;
-static int8_t x1856 = 1;
-volatile uint64_t x1875 = 666LLU;
-static uint8_t x1981 = 0U;
-uint32_t t38 = 5469U;
-static int32_t x2077 = -4433;
-int8_t x2078 = -1;
-int8_t x2412 = 35;
-volatile uint64_t x2443 = 71LLU;
-uint64_t x2475 = 800939080LLU;
-volatile uint64_t t44 = 154270895391069880LLU;
-int8_t x2502 = 54;
-int32_t t45 = -4;
-int32_t x2541 = INT32_MIN;
-static volatile uint32_t x2542 = 14U;
-uint64_t x2543 = 23037LLU;
-int8_t x2548 = 12;
-static volatile uint64_t t47 = 95501070776LLU;
-static int8_t x2578 = INT8_MAX;
-volatile uint64_t t48 = 70451LLU;
-uint16_t x2605 = UINT16_MAX;
-uint32_t x2681 = 69674U;
-int8_t x2683 = -1;
-volatile uint32_t x2693 = UINT32_MAX;
-static int16_t x2748 = 3;
-volatile uint64_t t52 = 1704032248LLU;
-int32_t x2785 = INT32_MIN;
-int64_t t54 = 15141029689970LL;
-volatile int8_t x3073 = INT8_MAX;
-uint32_t x3128 = 1U;
-int64_t x3257 = -1LL;
-int16_t x3277 = INT16_MAX;
-int8_t x3278 = -1;
-int16_t x3317 = INT16_MIN;
-int16_t x3518 = 294;
-uint64_t t64 = 13921213714171LLU;
-static uint16_t x3665 = 2U;
-uint64_t x3667 = UINT64_MAX;
-uint8_t x3826 = 1U;
-int16_t x3833 = 0;
-uint8_t x3836 = 3U;
-uint32_t x3916 = 12U;
-volatile uint64_t t70 = 1970847380334419LLU;
-uint16_t x4006 = 1273U;
-static uint8_t x4008 = 25U;
-volatile int16_t x4037 = 3243;
-volatile uint64_t t74 = 4LLU;
-uint32_t x4092 = 3U;
-static int64_t x4398 = -1LL;
-uint32_t x4541 = 0U;
-int32_t x4605 = INT32_MAX;
-uint32_t x4606 = 28406285U;
-int16_t x4609 = INT16_MIN;
-volatile int64_t x4611 = INT64_MIN;
-uint8_t x4620 = 0U;
-int64_t x4681 = 8962124327LL;
-int32_t x4683 = 9237849;
-uint16_t x4734 = 6U;
-uint64_t t85 = 7369026303451LLU;
-int16_t x4814 = INT16_MIN;
-volatile uint64_t x4854 = 134725480449046772LLU;
-static int32_t x5035 = INT32_MIN;
-static uint8_t x5036 = 0U;
-static int64_t t91 = INT64_MAX;
-uint8_t x5192 = 3U;
-uint32_t x5312 = 2U;
-uint16_t x5393 = 9U;
-static volatile uint64_t x5513 = 1318642LLU;
-uint16_t x5515 = 649U;
-uint64_t x5597 = UINT64_MAX;
-uint32_t x5600 = 4U;
+int16_t x609 = 366;
+int32_t t131 = -351127762;
+static uint32_t x613 = 302U;
+int8_t x614 = INT8_MAX;
+int64_t x615 = INT64_MAX;
+int16_t x624 = INT16_MAX;
+static int32_t x625 = 5686467;
+volatile int16_t x630 = 567;
+volatile int32_t t138 = -26804;
+int16_t x645 = 291;
+volatile int8_t x654 = -6;
+int32_t t142 = 8272355;
+static volatile int64_t x663 = INT64_MAX;
+int16_t x666 = -56;
+volatile int8_t x667 = -1;
+int8_t x675 = -22;
+int32_t t147 = -4;
+int16_t x692 = INT16_MAX;
+int64_t x694 = INT64_MIN;
+int64_t x702 = -1LL;
+int16_t x703 = INT16_MIN;
+int32_t t153 = -190330470;
+volatile int8_t x717 = INT8_MAX;
+uint64_t x719 = UINT64_MAX;
+volatile int8_t x730 = INT8_MAX;
+static int64_t x731 = -29LL;
+int16_t x739 = INT16_MAX;
+static int8_t x743 = -1;
+static int32_t x746 = INT32_MIN;
+int32_t t162 = 428595;
+int16_t x752 = INT16_MIN;
+int8_t x753 = 1;
+static int8_t x754 = INT8_MIN;
+uint8_t x770 = UINT8_MAX;
+int64_t x776 = INT64_MIN;
+static int32_t x780 = INT32_MIN;
+int32_t x783 = -1;
+static uint32_t x788 = UINT32_MAX;
+uint16_t x790 = UINT16_MAX;
+int64_t x791 = -1LL;
+int64_t x793 = INT64_MIN;
+int16_t x795 = INT16_MIN;
+static int32_t t175 = 2063368;
+static int16_t x806 = INT16_MAX;
+int16_t x808 = -35;
+volatile int16_t x809 = INT16_MAX;
+uint32_t x810 = 84883431U;
+int64_t x811 = -1LL;
+int8_t x813 = INT8_MIN;
+static volatile uint16_t x815 = 6163U;
+int64_t x822 = 722587712254274LL;
+static int8_t x829 = 2;
+volatile int64_t x830 = -1LL;
+volatile int32_t x831 = 166657032;
+int8_t x832 = -1;
+int8_t x833 = 45;
+uint8_t x837 = UINT8_MAX;
+uint64_t x840 = 919LLU;
+uint16_t x841 = 8406U;
+int8_t x843 = 0;
+volatile uint16_t x849 = UINT16_MAX;
+int32_t x850 = -1845;
+volatile int32_t x859 = INT32_MAX;
+static volatile uint16_t x860 = 9440U;
+uint64_t x863 = 2721341216681349LLU;
+volatile int32_t t191 = -36444642;
+volatile int32_t t194 = 219346720;
+uint32_t x883 = UINT32_MAX;
+int32_t t196 = -1546;
+volatile int64_t x886 = INT64_MAX;
+static int32_t t197 = 1;
+int32_t x890 = INT32_MIN;
+int32_t x891 = -1;
 
 
 void f0(void) {
-	int8_t x17 = 1;
-	uint64_t x19 = 2888258180LLU;
-	int32_t x20 = 1;
+    	static int32_t x1 = INT32_MIN;
+	volatile uint16_t x2 = UINT16_MAX;
+	int32_t x4 = INT32_MIN;
+	volatile int32_t t0 = 32063;
 
-	t0 = ((x17*(x18*x19))>>x20);
+    t0 = ((x1|(x2-x3))!=x4);
 
-	if (t0 != 39378512026120LLU) { NG(); } else { ; }
+    if (t0 != 0) { NG(); } else { ; }
 	
 }
 
 void f1(void) {
-	uint16_t x56 = 1U;
-	uint64_t t1 = 1918471907950337LLU;
+    	int16_t x13 = INT16_MIN;
+	int8_t x14 = INT8_MIN;
+	volatile int32_t x15 = INT32_MIN;
+	static int64_t x16 = -976088219LL;
+	int32_t t1 = 2885397;
 
-	t1 = ((x53*(x54*x55))>>x56);
+    t1 = ((x13|(x14-x15))!=x16);
 
-	if (t1 != 5819190LLU) { NG(); } else { ; }
+    if (t1 != 1) { NG(); } else { ; }
 	
 }
 
 void f2(void) {
-	uint64_t x118 = 8LLU;
-	static int16_t x120 = 40;
-	uint64_t t2 = 277195266786412LLU;
+    	volatile int32_t x18 = -1;
+	static volatile uint8_t x19 = 97U;
+	uint16_t x20 = UINT16_MAX;
 
-	t2 = ((x117*(x118*x119))>>x120);
+    t2 = ((x17|(x18-x19))!=x20);
 
-	if (t2 != 16777215LLU) { NG(); } else { ; }
+    if (t2 != 1) { NG(); } else { ; }
 	
 }
 
 void f3(void) {
-	volatile uint16_t x122 = UINT16_MAX;
-	int16_t x123 = 0;
-	uint8_t x124 = 7U;
-	volatile int64_t t3 = -1LL;
+    	static volatile int16_t x26 = INT16_MIN;
+	uint32_t x27 = UINT32_MAX;
+	uint64_t x28 = UINT64_MAX;
+	volatile int32_t t3 = -211391829;
 
-	t3 = ((x121*(x122*x123))>>x124);
+    t3 = ((x25|(x26-x27))!=x28);
 
-	if (t3 != 0LL) { NG(); } else { ; }
+    if (t3 != 1) { NG(); } else { ; }
 	
 }
 
 void f4(void) {
-	volatile int8_t x185 = INT8_MAX;
-	uint32_t x186 = UINT32_MAX;
-	uint32_t x187 = UINT32_MAX;
-	uint32_t t4 = 2337924U;
+    	uint32_t x29 = UINT32_MAX;
+	uint8_t x30 = 105U;
+	uint16_t x32 = 1067U;
+	int32_t t4 = 14341713;
 
-	t4 = ((x185*(x186*x187))>>x188);
+    t4 = ((x29|(x30-x31))!=x32);
 
-	if (t4 != 0U) { NG(); } else { ; }
+    if (t4 != 1) { NG(); } else { ; }
 	
 }
 
 void f5(void) {
-	uint32_t x401 = UINT32_MAX;
-	static uint32_t x402 = 94566131U;
-	uint64_t x403 = 2209618999325257994LLU;
-	int64_t x404 = 1LL;
-	uint64_t t5 = 266505461020142LLU;
+    	int8_t x33 = INT8_MAX;
+	uint32_t x34 = UINT32_MAX;
+	volatile int64_t x35 = -15375949LL;
+	int64_t x36 = INT64_MAX;
+	int32_t t5 = -859;
 
-	t5 = ((x401*(x402*x403))>>x404);
+    t5 = ((x33|(x34-x35))!=x36);
 
-	if (t5 != 7838893345665878977LLU) { NG(); } else { ; }
+    if (t5 != 1) { NG(); } else { ; }
 	
 }
 
 void f6(void) {
-	uint32_t x469 = 189U;
-	static int8_t x470 = INT8_MAX;
-	volatile uint32_t x472 = 15U;
-	volatile uint32_t t6 = 2U;
+    	int16_t x39 = -51;
+	int8_t x40 = -11;
+	volatile int32_t t6 = -8500690;
 
-	t6 = ((x469*(x470*x471))>>x472);
+    t6 = ((x37|(x38-x39))!=x40);
 
-	if (t6 != 131071U) { NG(); } else { ; }
+    if (t6 != 1) { NG(); } else { ; }
 	
 }
 
 void f7(void) {
-	int16_t x505 = INT16_MIN;
-	static uint16_t x506 = 0U;
-	int16_t x507 = -1;
-	uint8_t x508 = 20U;
-	int32_t t7 = -902;
+    	int32_t x42 = INT32_MIN;
+	int64_t x43 = -1LL;
+	int64_t x44 = INT64_MIN;
 
-	t7 = ((x505*(x506*x507))>>x508);
+    t7 = ((x41|(x42-x43))!=x44);
 
-	if (t7 != 0) { NG(); } else { ; }
+    if (t7 != 1) { NG(); } else { ; }
 	
 }
 
 void f8(void) {
-	volatile uint16_t x533 = 93U;
-	uint64_t x534 = 7LLU;
-	volatile uint64_t t8 = 194086784988LLU;
+    	int64_t x45 = INT64_MIN;
+	static volatile int32_t x47 = -1;
+	int16_t x48 = INT16_MAX;
+	volatile int32_t t8 = 3747599;
 
-	t8 = ((x533*(x534*x535))>>x536);
+    t8 = ((x45|(x46-x47))!=x48);
 
-	if (t8 != 1079125891442550LLU) { NG(); } else { ; }
+    if (t8 != 1) { NG(); } else { ; }
 	
 }
 
 void f9(void) {
-	volatile uint8_t x601 = 1U;
-	volatile uint64_t x602 = UINT64_MAX;
-	int16_t x604 = 1;
-	volatile uint64_t t9 = 16287102562LLU;
+    	static volatile uint32_t x50 = UINT32_MAX;
+	uint16_t x51 = 8U;
 
-	t9 = ((x601*(x602*x603))>>x604);
+    t9 = ((x49|(x50-x51))!=x52);
 
-	if (t9 != 9223372034707292160LLU) { NG(); } else { ; }
+    if (t9 != 1) { NG(); } else { ; }
 	
 }
 
 void f10(void) {
-	static volatile int16_t x621 = INT16_MIN;
-	uint8_t x622 = 75U;
-	static uint32_t x623 = 2142577442U;
-	volatile int64_t x624 = 10LL;
-	uint32_t t10 = 60U;
+    	int64_t x53 = -1LL;
+	static uint64_t x54 = UINT64_MAX;
+	static volatile uint8_t x56 = 17U;
+	int32_t t10 = -1585;
 
-	t10 = ((x621*(x622*x623))>>x624);
+    t10 = ((x53|(x54-x55))!=x56);
 
-	if (t10 != 1483072U) { NG(); } else { ; }
+    if (t10 != 1) { NG(); } else { ; }
 	
 }
 
 void f11(void) {
-	uint16_t x625 = 0U;
-	int8_t x626 = 5;
-	int8_t x628 = 1;
+    	int16_t x57 = -1;
+	int16_t x58 = INT16_MIN;
+	static int16_t x60 = -16;
+	volatile int32_t t11 = 287908;
 
-	t11 = ((x625*(x626*x627))>>x628);
+    t11 = ((x57|(x58-x59))!=x60);
 
-	if (t11 != 0) { NG(); } else { ; }
+    if (t11 != 1) { NG(); } else { ; }
 	
 }
 
 void f12(void) {
-	volatile int16_t x665 = INT16_MIN;
-	uint32_t x666 = 4U;
-	int16_t x667 = 3783;
-	uint16_t x668 = 3U;
-	uint32_t t12 = 1017672U;
+    	int8_t x66 = INT8_MIN;
+	static int16_t x67 = -1;
+	int16_t x68 = INT16_MAX;
+	static volatile int32_t t12 = 3394010;
 
-	t12 = ((x665*(x666*x667))>>x668);
+    t12 = ((x65|(x66-x67))!=x68);
 
-	if (t12 != 474890240U) { NG(); } else { ; }
+    if (t12 != 1) { NG(); } else { ; }
 	
 }
 
 void f13(void) {
-	int32_t x677 = 10759;
-	static int32_t x678 = -1;
-	static int64_t x679 = -300634358LL;
-	static uint8_t x680 = 3U;
+    	volatile uint16_t x69 = 21U;
+	uint8_t x70 = 1U;
+	static int32_t x71 = -1010;
+	int8_t x72 = -6;
 
-	t13 = ((x677*(x678*x679))>>x680);
+    t13 = ((x69|(x70-x71))!=x72);
 
-	if (t13 != 404315632215LL) { NG(); } else { ; }
+    if (t13 != 1) { NG(); } else { ; }
 	
 }
 
 void f14(void) {
-	int16_t x689 = INT16_MAX;
-	int32_t x690 = 231647;
-	uint64_t x691 = 3619431520934LLU;
-	int32_t x692 = 0;
-	volatile uint64_t t14 = 21664LLU;
+    	static int16_t x73 = -1;
+	int8_t x74 = 0;
+	static int64_t x75 = -1LL;
+	int16_t x76 = -1;
+	volatile int32_t t14 = 184703249;
 
-	t14 = ((x689*(x690*x691))>>x692);
+    t14 = ((x73|(x74-x75))!=x76);
 
-	if (t14 != 5648745057378474342LLU) { NG(); } else { ; }
+    if (t14 != 0) { NG(); } else { ; }
 	
 }
 
 void f15(void) {
-	uint8_t x709 = UINT8_MAX;
-	volatile uint64_t x710 = UINT64_MAX;
-	int32_t x711 = INT32_MIN;
-	static int32_t x712 = 0;
-	volatile uint64_t t15 = 0LLU;
+    	uint32_t x78 = 24815292U;
+	uint64_t x79 = 3LLU;
+	uint8_t x80 = UINT8_MAX;
+	static volatile int32_t t15 = 5254;
 
-	t15 = ((x709*(x710*x711))>>x712);
+    t15 = ((x77|(x78-x79))!=x80);
 
-	if (t15 != 547608330240LLU) { NG(); } else { ; }
+    if (t15 != 1) { NG(); } else { ; }
 	
 }
 
 void f16(void) {
-	int32_t x769 = 1630279;
-	uint32_t x770 = 15U;
-	static int32_t x771 = -144673783;
-	volatile uint32_t x772 = 2U;
-	uint32_t t16 = 1U;
+    	static int8_t x81 = 7;
+	int8_t x82 = INT8_MIN;
+	volatile uint64_t x83 = UINT64_MAX;
+	uint32_t x84 = UINT32_MAX;
+	static volatile int32_t t16 = 52;
 
-	t16 = ((x769*(x770*x771))>>x772);
+    t16 = ((x81|(x82-x83))!=x84);
 
-	if (t16 != 267925084U) { NG(); } else { ; }
+    if (t16 != 1) { NG(); } else { ; }
 	
 }
 
 void f17(void) {
-	int8_t x783 = INT8_MAX;
-	volatile int8_t x784 = 1;
-	static volatile uint32_t t17 = 10U;
+    	int64_t x94 = -1LL;
+	volatile int64_t x95 = -1LL;
+	int64_t x96 = 6312858455066400LL;
 
-	t17 = ((x781*(x782*x783))>>x784);
+    t17 = ((x93|(x94-x95))!=x96);
 
-	if (t17 != 1592980616U) { NG(); } else { ; }
+    if (t17 != 1) { NG(); } else { ; }
 	
 }
 
 void f18(void) {
-	uint64_t x941 = 63981154223803LLU;
-	volatile int8_t x942 = -5;
-	static volatile int8_t x943 = -42;
-	int8_t x944 = 4;
-	uint64_t t18 = 23572368LLU;
+    	static int32_t x97 = INT32_MAX;
+	static int64_t x98 = INT64_MIN;
+	uint64_t x99 = 4519808075582294592LLU;
+	int16_t x100 = 1;
+	int32_t t18 = -1;
 
-	t18 = ((x941*(x942*x943))>>x944);
+    t18 = ((x97|(x98-x99))!=x100);
 
-	if (t18 != 839752649187414LLU) { NG(); } else { ; }
+    if (t18 != 1) { NG(); } else { ; }
 	
 }
 
 void f19(void) {
-	int32_t x949 = -76716488;
-	uint32_t x950 = 34335U;
-	uint16_t x951 = 841U;
-	uint32_t t19 = 12U;
+    	int16_t x101 = INT16_MIN;
+	static volatile int16_t x102 = -109;
+	int16_t x103 = -1;
+	uint32_t x104 = 60U;
+	int32_t t19 = 4;
 
-	t19 = ((x949*(x950*x951))>>x952);
+    t19 = ((x101|(x102-x103))!=x104);
 
-	if (t19 != 23088144U) { NG(); } else { ; }
+    if (t19 != 1) { NG(); } else { ; }
 	
 }
 
 void f20(void) {
-	volatile int32_t x1021 = -1;
-	int16_t x1022 = -1;
-	static volatile uint16_t x1023 = UINT16_MAX;
-	static int32_t t20 = -363799;
+    	int16_t x105 = -457;
+	volatile int64_t x106 = -1LL;
+	uint32_t x107 = 1931863U;
+	int8_t x108 = INT8_MIN;
+	volatile int32_t t20 = -7898;
 
-	t20 = ((x1021*(x1022*x1023))>>x1024);
+    t20 = ((x105|(x106-x107))!=x108);
 
-	if (t20 != 0) { NG(); } else { ; }
+    if (t20 != 1) { NG(); } else { ; }
 	
 }
 
 void f21(void) {
-	uint16_t x1029 = 2794U;
-	int8_t x1031 = INT8_MAX;
-	uint8_t x1032 = 1U;
-	volatile int32_t t21 = 58276810;
+    	int64_t x110 = -1LL;
+	int8_t x111 = 1;
+	int64_t x112 = -1LL;
 
-	t21 = ((x1029*(x1030*x1031))>>x1032);
+    t21 = ((x109|(x110-x111))!=x112);
 
-	if (t21 != 45241845) { NG(); } else { ; }
+    if (t21 != 0) { NG(); } else { ; }
 	
 }
 
 void f22(void) {
-	int16_t x1113 = 976;
-	static volatile int8_t x1114 = -3;
-	int32_t x1115 = -1;
-	volatile int8_t x1116 = 1;
-	int32_t t22 = -3112;
+    	static uint64_t x113 = 31542234535277199LLU;
+	static uint8_t x114 = 5U;
+	static uint8_t x115 = UINT8_MAX;
+	int32_t x116 = 18441720;
+	int32_t t22 = 30836;
 
-	t22 = ((x1113*(x1114*x1115))>>x1116);
+    t22 = ((x113|(x114-x115))!=x116);
 
-	if (t22 != 1464) { NG(); } else { ; }
+    if (t22 != 1) { NG(); } else { ; }
 	
 }
 
 void f23(void) {
-	uint32_t x1133 = UINT32_MAX;
-	volatile int16_t x1134 = 341;
-	uint64_t x1135 = 62444083802317LLU;
+    	static uint32_t x117 = 2436U;
+	volatile uint16_t x118 = UINT16_MAX;
+	static int8_t x119 = -1;
+	int32_t x120 = 182424;
+	int32_t t23 = 514;
 
-	t23 = ((x1133*(x1134*x1135))>>x1136);
+    t23 = ((x117|(x118-x119))!=x120);
 
-	if (t23 != 5505681426507559LLU) { NG(); } else { ; }
+    if (t23 != 1) { NG(); } else { ; }
 	
 }
 
 void f24(void) {
-	int64_t x1193 = INT64_MIN;
-	static uint64_t x1194 = UINT64_MAX;
-	int16_t x1195 = -1;
-	uint16_t x1196 = 58U;
-	uint64_t t24 = 1426191949171932133LLU;
+    	uint16_t x123 = 5U;
+	int8_t x124 = -1;
+	int32_t t24 = 12138;
 
-	t24 = ((x1193*(x1194*x1195))>>x1196);
+    t24 = ((x121|(x122-x123))!=x124);
 
-	if (t24 != 32LLU) { NG(); } else { ; }
+    if (t24 != 0) { NG(); } else { ; }
 	
 }
 
 void f25(void) {
-	volatile uint64_t x1231 = 47057524LLU;
-	uint64_t t25 = 3470724LLU;
+    	uint16_t x125 = 3221U;
+	volatile int16_t x127 = -1;
+	volatile int32_t x128 = INT32_MAX;
+	volatile int32_t t25 = -221341909;
 
-	t25 = ((x1229*(x1230*x1231))>>x1232);
+    t25 = ((x125|(x126-x127))!=x128);
 
-	if (t25 != 1513480512510194LLU) { NG(); } else { ; }
+    if (t25 != 1) { NG(); } else { ; }
 	
 }
 
 void f26(void) {
-	uint64_t x1265 = UINT64_MAX;
-	int8_t x1266 = -1;
-	static int64_t x1267 = INT64_MAX;
-	static uint64_t t26 = 109LLU;
+    	int16_t x129 = -1;
+	uint16_t x130 = UINT16_MAX;
+	volatile int64_t x131 = -1344788222750LL;
+	static uint64_t x132 = UINT64_MAX;
 
-	t26 = ((x1265*(x1266*x1267))>>x1268);
+    t26 = ((x129|(x130-x131))!=x132);
 
-	if (t26 != 1152921504606846975LLU) { NG(); } else { ; }
+    if (t26 != 0) { NG(); } else { ; }
 	
 }
 
 void f27(void) {
-	int8_t x1325 = -1;
-	uint16_t x1326 = 0U;
-	uint8_t x1328 = 1U;
-	volatile int32_t t27 = 131100315;
+    	uint8_t x134 = UINT8_MAX;
+	static int16_t x135 = INT16_MIN;
+	int8_t x136 = INT8_MIN;
+	volatile int32_t t27 = -6265885;
 
-	t27 = ((x1325*(x1326*x1327))>>x1328);
+    t27 = ((x133|(x134-x135))!=x136);
 
-	if (t27 != 0) { NG(); } else { ; }
+    if (t27 != 1) { NG(); } else { ; }
 	
 }
 
 void f28(void) {
-	static int8_t x1417 = INT8_MIN;
-	int32_t x1418 = -1;
-	int64_t x1419 = 2474251398LL;
-	volatile uint8_t x1420 = 7U;
+    	static volatile int8_t x138 = INT8_MIN;
+	uint64_t x139 = 256LLU;
+	int8_t x140 = 0;
+	static volatile int32_t t28 = 0;
 
-	t28 = ((x1417*(x1418*x1419))>>x1420);
+    t28 = ((x137|(x138-x139))!=x140);
 
-	if (t28 != 2474251398LL) { NG(); } else { ; }
+    if (t28 != 1) { NG(); } else { ; }
 	
 }
 
 void f29(void) {
-	uint16_t x1421 = 39U;
-	int16_t x1423 = 1002;
-	volatile int16_t x1424 = 0;
-	uint32_t t29 = 898U;
+    	static volatile int32_t x143 = -471370072;
+	int64_t x144 = -1LL;
 
-	t29 = ((x1421*(x1422*x1423))>>x1424);
+    t29 = ((x141|(x142-x143))!=x144);
 
-	if (t29 != 38218284U) { NG(); } else { ; }
+    if (t29 != 1) { NG(); } else { ; }
 	
 }
 
 void f30(void) {
-	uint16_t x1661 = UINT16_MAX;
-	volatile uint64_t x1662 = 238510341596786728LLU;
-	static uint64_t x1663 = 257056064LLU;
-	uint8_t x1664 = 15U;
-	uint64_t t30 = 17535748683401413LLU;
+    	int8_t x145 = INT8_MAX;
+	uint8_t x146 = 1U;
+	int16_t x147 = -481;
+	int32_t x148 = INT32_MAX;
 
-	t30 = ((x1661*(x1662*x1663))>>x1664);
+    t30 = ((x145|(x146-x147))!=x148);
 
-	if (t30 != 186821791167050LLU) { NG(); } else { ; }
+    if (t30 != 1) { NG(); } else { ; }
 	
 }
 
 void f31(void) {
-	int32_t x1729 = INT32_MIN;
-	volatile int64_t x1730 = 56665568305336628LL;
-	static int8_t x1732 = 2;
-	uint64_t t31 = 29206199905123LLU;
+    	int32_t x149 = INT32_MIN;
+	volatile int32_t x150 = -1;
+	int64_t x151 = -1LL;
+	static int32_t x152 = INT32_MIN;
+	int32_t t31 = -484393545;
 
-	t31 = ((x1729*(x1730*x1731))>>x1732);
+    t31 = ((x149|(x150-x151))!=x152);
 
-	if (t31 != 1709883683059531776LLU) { NG(); } else { ; }
+    if (t31 != 0) { NG(); } else { ; }
 	
 }
 
 void f32(void) {
-	int16_t x1753 = -1;
-	static uint16_t x1754 = 8U;
-	uint64_t x1755 = 134730350289202839LLU;
-	static uint64_t t32 = 117147971368338332LLU;
+    	uint64_t x156 = 447738415953LLU;
+	volatile int32_t t32 = 0;
 
-	t32 = ((x1753*(x1754*x1755))>>x1756);
+    t32 = ((x153|(x154-x155))!=x156);
 
-	if (t32 != 135694541182780694LLU) { NG(); } else { ; }
+    if (t32 != 1) { NG(); } else { ; }
 	
 }
 
 void f33(void) {
-	int32_t x1822 = -1;
-	uint64_t t33 = 7556476722774LLU;
+    	int32_t x157 = -1;
+	int8_t x158 = -1;
+	volatile int64_t x159 = INT64_MAX;
+	volatile int16_t x160 = INT16_MIN;
+	static volatile int32_t t33 = -3;
 
-	t33 = ((x1821*(x1822*x1823))>>x1824);
+    t33 = ((x157|(x158-x159))!=x160);
 
-	if (t33 != 278832666081874LLU) { NG(); } else { ; }
+    if (t33 != 1) { NG(); } else { ; }
 	
 }
 
 void f34(void) {
-	int64_t x1853 = -1LL;
-	int64_t x1854 = INT64_MIN;
-	uint64_t x1855 = 151882406494LLU;
-	static uint64_t t34 = 300276161282623387LLU;
+    	int64_t x161 = INT64_MAX;
+	volatile uint8_t x162 = 13U;
+	int16_t x163 = -2905;
+	static uint64_t x164 = 16416926942183510LLU;
+	int32_t t34 = -1;
 
-	t34 = ((x1853*(x1854*x1855))>>x1856);
+    t34 = ((x161|(x162-x163))!=x164);
 
-	if (t34 != 0LLU) { NG(); } else { ; }
+    if (t34 != 1) { NG(); } else { ; }
 	
 }
 
 void f35(void) {
-	int32_t x1873 = INT32_MIN;
-	static int64_t x1874 = INT64_MIN;
-	uint8_t x1876 = 15U;
-	volatile uint64_t t35 = 132009LLU;
+    	static volatile uint16_t x177 = 9715U;
+	volatile int64_t x178 = -1013LL;
+	int8_t x179 = -1;
+	uint64_t x180 = UINT64_MAX;
+	int32_t t35 = -415837330;
 
-	t35 = ((x1873*(x1874*x1875))>>x1876);
+    t35 = ((x177|(x178-x179))!=x180);
 
-	if (t35 != 0LLU) { NG(); } else { ; }
+    if (t35 != 1) { NG(); } else { ; }
 	
 }
 
 void f36(void) {
-	int64_t x1881 = -1LL;
-	int32_t x1882 = -1;
-	uint16_t x1883 = UINT16_MAX;
-	uint16_t x1884 = 1U;
-	static volatile int64_t t36 = -471LL;
+    	int16_t x181 = INT16_MAX;
+	static int16_t x182 = -3016;
+	int16_t x183 = -171;
+	volatile int32_t t36 = -3;
 
-	t36 = ((x1881*(x1882*x1883))>>x1884);
+    t36 = ((x181|(x182-x183))!=x184);
 
-	if (t36 != 32767LL) { NG(); } else { ; }
+    if (t36 != 1) { NG(); } else { ; }
 	
 }
 
 void f37(void) {
-	static uint32_t x1909 = UINT32_MAX;
-	uint16_t x1910 = UINT16_MAX;
-	volatile uint8_t x1911 = 33U;
-	uint8_t x1912 = 0U;
-	volatile uint32_t t37 = 76696U;
+    	volatile uint8_t x185 = UINT8_MAX;
+	int16_t x186 = -1;
+	static uint32_t x187 = 11338812U;
+	int32_t x188 = 288;
+	int32_t t37 = 0;
 
-	t37 = ((x1909*(x1910*x1911))>>x1912);
+    t37 = ((x185|(x186-x187))!=x188);
 
-	if (t37 != 4292804641U) { NG(); } else { ; }
+    if (t37 != 1) { NG(); } else { ; }
 	
 }
 
 void f38(void) {
-	uint16_t x1982 = 7U;
-	uint32_t x1983 = 15696199U;
-	static int32_t x1984 = 0;
+    	static int64_t x189 = -1LL;
+	int32_t x190 = -1;
+	volatile int32_t x191 = INT32_MIN;
+	int64_t x192 = -1LL;
+	volatile int32_t t38 = -57806;
 
-	t38 = ((x1981*(x1982*x1983))>>x1984);
+    t38 = ((x189|(x190-x191))!=x192);
 
-	if (t38 != 0U) { NG(); } else { ; }
+    if (t38 != 0) { NG(); } else { ; }
 	
 }
 
 void f39(void) {
-	static uint32_t x2079 = 52U;
-	uint16_t x2080 = 8U;
-	static uint32_t t39 = 27676819U;
+    	int64_t x193 = INT64_MAX;
+	int8_t x194 = INT8_MIN;
+	uint64_t x195 = UINT64_MAX;
+	int64_t x196 = INT64_MAX;
+	volatile int32_t t39 = 107216;
 
-	t39 = ((x2077*(x2078*x2079))>>x2080);
+    t39 = ((x193|(x194-x195))!=x196);
 
-	if (t39 != 900U) { NG(); } else { ; }
+    if (t39 != 1) { NG(); } else { ; }
 	
 }
 
 void f40(void) {
-	static int16_t x2185 = INT16_MIN;
-	int32_t x2186 = INT32_MIN;
-	uint64_t x2187 = UINT64_MAX;
-	uint8_t x2188 = 0U;
-	volatile uint64_t t40 = 1427746969909LLU;
+    	uint16_t x197 = 2U;
+	int32_t x198 = INT32_MAX;
+	uint8_t x199 = 0U;
+	static int32_t t40 = -9141;
 
-	t40 = ((x2185*(x2186*x2187))>>x2188);
+    t40 = ((x197|(x198-x199))!=x200);
 
-	if (t40 != 18446673704965373952LLU) { NG(); } else { ; }
+    if (t40 != 1) { NG(); } else { ; }
 	
 }
 
 void f41(void) {
-	static volatile int64_t x2401 = INT64_MIN;
-	int64_t x2402 = -1LL;
-	uint64_t x2403 = UINT64_MAX;
-	int32_t x2404 = 10;
-	uint64_t t41 = 17860300997888339LLU;
+    	int8_t x201 = 1;
+	int16_t x203 = -1;
+	int64_t x204 = 18528159279128417LL;
+	volatile int32_t t41 = -4664235;
 
-	t41 = ((x2401*(x2402*x2403))>>x2404);
+    t41 = ((x201|(x202-x203))!=x204);
 
-	if (t41 != 9007199254740992LLU) { NG(); } else { ; }
+    if (t41 != 1) { NG(); } else { ; }
 	
 }
 
 void f42(void) {
-	static volatile uint64_t x2409 = 137922901159980LLU;
-	int8_t x2410 = -1;
-	int32_t x2411 = 402;
-	uint64_t t42 = 4008LLU;
+    	int32_t x209 = INT32_MIN;
+	int64_t x210 = -1LL;
+	int32_t x211 = 374420;
+	volatile int32_t t42 = 208;
 
-	t42 = ((x2409*(x2410*x2411))>>x2412);
+    t42 = ((x209|(x210-x211))!=x212);
 
-	if (t42 != 535257249LLU) { NG(); } else { ; }
+    if (t42 != 1) { NG(); } else { ; }
 	
 }
 
 void f43(void) {
-	int16_t x2441 = -10922;
-	uint16_t x2442 = 77U;
-	int32_t x2444 = 1;
-	volatile uint64_t t43 = 28836958096936757LLU;
+    	static int32_t x213 = INT32_MIN;
+	int8_t x214 = INT8_MIN;
+	static int32_t x215 = -256208;
+	int16_t x216 = 416;
+	static volatile int32_t t43 = -111144984;
 
-	t43 = ((x2441*(x2442*x2443))>>x2444);
+    t43 = ((x213|(x214-x215))!=x216);
 
-	if (t43 != 9223372036824920521LLU) { NG(); } else { ; }
+    if (t43 != 1) { NG(); } else { ; }
 	
 }
 
 void f44(void) {
-	int32_t x2473 = -1;
-	uint8_t x2474 = UINT8_MAX;
-	uint16_t x2476 = 62U;
+    	int16_t x217 = -1;
+	int16_t x219 = -1;
+	uint64_t x220 = 29973493752LLU;
+	int32_t t44 = 59632;
 
-	t44 = ((x2473*(x2474*x2475))>>x2476);
+    t44 = ((x217|(x218-x219))!=x220);
 
-	if (t44 != 3LLU) { NG(); } else { ; }
+    if (t44 != 1) { NG(); } else { ; }
 	
 }
 
 void f45(void) {
-	int8_t x2501 = -1;
-	int16_t x2503 = INT16_MIN;
-	static uint8_t x2504 = 7U;
+    	int8_t x222 = -4;
+	int16_t x223 = INT16_MIN;
+	int32_t x224 = INT32_MIN;
 
-	t45 = ((x2501*(x2502*x2503))>>x2504);
+    t45 = ((x221|(x222-x223))!=x224);
 
-	if (t45 != 13824) { NG(); } else { ; }
+    if (t45 != 1) { NG(); } else { ; }
 	
 }
 
 void f46(void) {
-	uint8_t x2544 = 6U;
-	static uint64_t t46 = 121298LLU;
+    	int64_t x229 = INT64_MAX;
+	int32_t x230 = -424573;
+	uint64_t x231 = 11275252LLU;
+	volatile int16_t x232 = INT16_MIN;
+	static int32_t t46 = -34;
 
-	t46 = ((x2541*(x2542*x2543))>>x2544);
+    t46 = ((x229|(x230-x231))!=x232);
 
-	if (t46 != 288219554243411968LLU) { NG(); } else { ; }
+    if (t46 != 1) { NG(); } else { ; }
 	
 }
 
 void f47(void) {
-	int32_t x2545 = INT32_MIN;
-	volatile uint64_t x2546 = UINT64_MAX;
-	int8_t x2547 = INT8_MIN;
+    	int64_t x233 = 137154LL;
+	volatile int64_t x234 = -1160LL;
+	int16_t x235 = INT16_MIN;
+	uint64_t x236 = 3LLU;
+	static int32_t t47 = 307581;
 
-	t47 = ((x2545*(x2546*x2547))>>x2548);
+    t47 = ((x233|(x234-x235))!=x236);
 
-	if (t47 != 4503599560261632LLU) { NG(); } else { ; }
+    if (t47 != 1) { NG(); } else { ; }
 	
 }
 
 void f48(void) {
-	uint64_t x2577 = UINT64_MAX;
-	volatile uint64_t x2579 = 1706974438LLU;
-	int8_t x2580 = 45;
+    	uint16_t x237 = UINT16_MAX;
+	uint8_t x238 = UINT8_MAX;
+	int8_t x239 = 1;
+	static int8_t x240 = 12;
+	int32_t t48 = -42014219;
 
-	t48 = ((x2577*(x2578*x2579))>>x2580);
+    t48 = ((x237|(x238-x239))!=x240);
 
-	if (t48 != 524287LLU) { NG(); } else { ; }
+    if (t48 != 1) { NG(); } else { ; }
 	
 }
 
 void f49(void) {
-	static uint32_t x2606 = 1336944260U;
-	int16_t x2607 = -1;
-	volatile uint16_t x2608 = 1U;
-	volatile uint32_t t49 = 80698U;
+    	static int64_t x241 = INT64_MAX;
+	int16_t x242 = 0;
+	static volatile int8_t x243 = -1;
+	static int16_t x244 = INT16_MAX;
+	int32_t t49 = 2;
 
-	t49 = ((x2605*(x2606*x2607))>>x2608);
+    t49 = ((x241|(x242-x243))!=x244);
 
-	if (t49 != 345379650U) { NG(); } else { ; }
+    if (t49 != 1) { NG(); } else { ; }
 	
 }
 
 void f50(void) {
-	int16_t x2682 = INT16_MAX;
-	int8_t x2684 = 1;
-	volatile uint32_t t50 = 33U;
+    	static int32_t x250 = 106639;
+	static volatile int8_t x251 = INT8_MIN;
+	uint32_t x252 = 389886812U;
 
-	t50 = ((x2681*(x2682*x2683))>>x2684);
+    t50 = ((x249|(x250-x251))!=x252);
 
-	if (t50 != 1005979669U) { NG(); } else { ; }
+    if (t50 != 1) { NG(); } else { ; }
 	
 }
 
 void f51(void) {
-	int8_t x2694 = INT8_MIN;
-	uint8_t x2695 = 5U;
-	uint32_t x2696 = 0U;
-	uint32_t t51 = 1440411069U;
+    	int64_t x253 = -1LL;
+	int64_t x254 = 28234800921908717LL;
+	int64_t x255 = INT64_MAX;
+	int64_t x256 = INT64_MAX;
+	volatile int32_t t51 = 6;
 
-	t51 = ((x2693*(x2694*x2695))>>x2696);
+    t51 = ((x253|(x254-x255))!=x256);
 
-	if (t51 != 640U) { NG(); } else { ; }
+    if (t51 != 1) { NG(); } else { ; }
 	
 }
 
 void f52(void) {
-	int64_t x2745 = INT64_MAX;
-	int16_t x2746 = -133;
-	volatile uint64_t x2747 = UINT64_MAX;
+    	uint16_t x258 = 213U;
+	int64_t x259 = 45570053088LL;
+	static int8_t x260 = INT8_MAX;
+	int32_t t52 = 1;
 
-	t52 = ((x2745*(x2746*x2747))>>x2748);
+    t52 = ((x257|(x258-x259))!=x260);
 
-	if (t52 != 1152921504606846959LLU) { NG(); } else { ; }
+    if (t52 != 1) { NG(); } else { ; }
 	
 }
 
 void f53(void) {
-	volatile int8_t x2749 = INT8_MIN;
-	uint32_t x2750 = UINT32_MAX;
-	static uint8_t x2751 = 47U;
-	uint64_t x2752 = 29LLU;
-	uint32_t t53 = 886481U;
+    	int16_t x261 = INT16_MIN;
+	uint8_t x263 = 12U;
+	int64_t x264 = INT64_MIN;
+	static int32_t t53 = 55487690;
 
-	t53 = ((x2749*(x2750*x2751))>>x2752);
+    t53 = ((x261|(x262-x263))!=x264);
 
-	if (t53 != 0U) { NG(); } else { ; }
+    if (t53 != 1) { NG(); } else { ; }
 	
 }
 
 void f54(void) {
-	int64_t x2786 = 0LL;
-	int16_t x2787 = INT16_MIN;
-	uint8_t x2788 = 43U;
+    	int32_t x265 = -185569008;
+	volatile int32_t x267 = INT32_MIN;
+	uint64_t x268 = UINT64_MAX;
+	volatile int32_t t54 = 18;
 
-	t54 = ((x2785*(x2786*x2787))>>x2788);
+    t54 = ((x265|(x266-x267))!=x268);
 
-	if (t54 != 0LL) { NG(); } else { ; }
+    if (t54 != 1) { NG(); } else { ; }
 	
 }
 
 void f55(void) {
-	uint32_t x3074 = 67201U;
-	volatile int16_t x3075 = INT16_MIN;
-	static int8_t x3076 = 0;
-	static uint32_t t55 = 864U;
+    	static int64_t x270 = INT64_MIN;
+	int64_t x271 = -1LL;
+	int32_t t55 = 3745;
 
-	t55 = ((x3073*(x3074*x3075))>>x3076);
+    t55 = ((x269|(x270-x271))!=x272);
 
-	if (t55 != 3808460800U) { NG(); } else { ; }
+    if (t55 != 1) { NG(); } else { ; }
 	
 }
 
 void f56(void) {
-	int8_t x3125 = -2;
-	static int32_t x3126 = -420588;
-	int16_t x3127 = 9;
-	volatile int32_t t56 = -43734;
+    	uint32_t x275 = 6U;
+	uint16_t x276 = 1822U;
+	volatile int32_t t56 = 18;
 
-	t56 = ((x3125*(x3126*x3127))>>x3128);
+    t56 = ((x273|(x274-x275))!=x276);
 
-	if (t56 != 3785292) { NG(); } else { ; }
+    if (t56 != 1) { NG(); } else { ; }
 	
 }
 
 void f57(void) {
-	uint64_t x3221 = 58796379834LLU;
-	volatile int8_t x3222 = -26;
-	static volatile int8_t x3223 = INT8_MAX;
-	volatile uint64_t x3224 = 40LLU;
-	uint64_t t57 = 45199483892LLU;
+    	uint32_t x277 = 822905U;
+	int32_t x278 = -863205603;
+	static int32_t x279 = INT32_MIN;
+	int8_t x280 = INT8_MAX;
+	static volatile int32_t t57 = -6319854;
 
-	t57 = ((x3221*(x3222*x3223))>>x3224);
+    t57 = ((x277|(x278-x279))!=x280);
 
-	if (t57 != 16777039LLU) { NG(); } else { ; }
+    if (t57 != 1) { NG(); } else { ; }
 	
 }
 
 void f58(void) {
-	static volatile int64_t x3258 = 1LL;
-	int32_t x3259 = -64722176;
-	volatile uint8_t x3260 = 9U;
-	volatile int64_t t58 = 659LL;
+    	int8_t x281 = -1;
+	int8_t x282 = INT8_MAX;
+	int16_t x283 = INT16_MIN;
+	int16_t x284 = INT16_MIN;
+	int32_t t58 = 344242;
 
-	t58 = ((x3257*(x3258*x3259))>>x3260);
+    t58 = ((x281|(x282-x283))!=x284);
 
-	if (t58 != 126410LL) { NG(); } else { ; }
+    if (t58 != 1) { NG(); } else { ; }
 	
 }
 
 void f59(void) {
-	volatile uint64_t x3279 = 60LLU;
-	static volatile uint8_t x3280 = 0U;
-	uint64_t t59 = 100849563364LLU;
+    	int64_t x285 = INT64_MAX;
+	static uint8_t x286 = 0U;
+	int16_t x287 = 29;
 
-	t59 = ((x3277*(x3278*x3279))>>x3280);
+    t59 = ((x285|(x286-x287))!=x288);
 
-	if (t59 != 18446744073707585596LLU) { NG(); } else { ; }
+    if (t59 != 1) { NG(); } else { ; }
 	
 }
 
 void f60(void) {
-	uint32_t x3318 = 48224U;
-	uint64_t x3319 = 377813355899550LLU;
-	int16_t x3320 = 55;
-	static volatile uint64_t t60 = 1785005632371551LLU;
+    	int16_t x289 = -1;
+	volatile int8_t x290 = INT8_MIN;
+	int8_t x291 = INT8_MIN;
+	volatile int8_t x292 = 0;
+	int32_t t60 = -3;
 
-	t60 = ((x3317*(x3318*x3319))>>x3320);
+    t60 = ((x289|(x290-x291))!=x292);
 
-	if (t60 != 185LLU) { NG(); } else { ; }
+    if (t60 != 1) { NG(); } else { ; }
 	
 }
 
 void f61(void) {
-	int32_t x3517 = INT32_MIN;
-	uint64_t x3519 = UINT64_MAX;
-	uint16_t x3520 = 1U;
-	volatile uint64_t t61 = 98LLU;
+    	uint64_t x293 = 6769LLU;
+	int8_t x294 = INT8_MIN;
+	int32_t x295 = INT32_MIN;
+	int64_t x296 = -3LL;
+	volatile int32_t t61 = -70009;
 
-	t61 = ((x3517*(x3518*x3519))>>x3520);
+    t61 = ((x293|(x294-x295))!=x296);
 
-	if (t61 != 315680096256LLU) { NG(); } else { ; }
+    if (t61 != 1) { NG(); } else { ; }
 	
 }
 
 void f62(void) {
-	uint64_t x3593 = 1631041201LLU;
-	uint32_t x3594 = 452U;
-	volatile int32_t x3595 = INT32_MAX;
-	uint8_t x3596 = 2U;
-	uint64_t t62 = 22374304488LLU;
+    	int8_t x297 = INT8_MIN;
+	uint16_t x298 = 71U;
+	int8_t x299 = 8;
+	int64_t x300 = 4LL;
+	int32_t t62 = -3230;
 
-	t62 = ((x3593*(x3594*x3595))>>x3596);
+    t62 = ((x297|(x298-x299))!=x300);
 
-	if (t62 != 1751316969873234911LLU) { NG(); } else { ; }
+    if (t62 != 1) { NG(); } else { ; }
 	
 }
 
 void f63(void) {
-	volatile uint16_t x3609 = UINT16_MAX;
-	uint32_t x3610 = UINT32_MAX;
-	static int32_t x3611 = INT32_MIN;
-	static int8_t x3612 = 7;
-	uint32_t t63 = 9085U;
+    	uint8_t x301 = 6U;
+	int16_t x302 = INT16_MIN;
+	int16_t x303 = INT16_MIN;
+	static int32_t t63 = 1016;
 
-	t63 = ((x3609*(x3610*x3611))>>x3612);
+    t63 = ((x301|(x302-x303))!=x304);
 
-	if (t63 != 16777216U) { NG(); } else { ; }
+    if (t63 != 1) { NG(); } else { ; }
 	
 }
 
 void f64(void) {
-	int16_t x3641 = 324;
-	volatile uint64_t x3642 = 2022LLU;
-	int32_t x3643 = INT32_MAX;
-	uint64_t x3644 = 2LLU;
+    	int64_t x305 = INT64_MIN;
+	uint32_t x306 = 1377U;
+	volatile uint8_t x307 = UINT8_MAX;
+	int32_t x308 = INT32_MAX;
+	int32_t t64 = -274;
 
-	t64 = ((x3641*(x3642*x3643))>>x3644);
+    t64 = ((x305|(x306-x307))!=x308);
 
-	if (t64 != 351719166672954LLU) { NG(); } else { ; }
+    if (t64 != 1) { NG(); } else { ; }
 	
 }
 
 void f65(void) {
-	uint8_t x3666 = 22U;
-	static int8_t x3668 = 5;
-	uint64_t t65 = 20LLU;
+    	volatile int64_t x317 = INT64_MIN;
+	volatile uint64_t x318 = 20180141LLU;
+	static int8_t x319 = INT8_MIN;
+	uint16_t x320 = UINT16_MAX;
+	int32_t t65 = 0;
 
-	t65 = ((x3665*(x3666*x3667))>>x3668);
+    t65 = ((x317|(x318-x319))!=x320);
 
-	if (t65 != 576460752303423486LLU) { NG(); } else { ; }
+    if (t65 != 1) { NG(); } else { ; }
 	
 }
 
 void f66(void) {
-	uint32_t x3693 = 0U;
-	uint32_t x3694 = UINT32_MAX;
-	uint16_t x3695 = UINT16_MAX;
-	uint8_t x3696 = 5U;
-	uint32_t t66 = 0U;
+    	volatile int8_t x321 = -1;
+	int64_t x322 = INT64_MAX;
+	static int64_t x324 = -39705020461585LL;
+	volatile int32_t t66 = 0;
 
-	t66 = ((x3693*(x3694*x3695))>>x3696);
+    t66 = ((x321|(x322-x323))!=x324);
 
-	if (t66 != 0U) { NG(); } else { ; }
+    if (t66 != 1) { NG(); } else { ; }
 	
 }
 
 void f67(void) {
-	uint64_t x3825 = UINT64_MAX;
-	int8_t x3827 = INT8_MIN;
-	volatile int8_t x3828 = 0;
-	static volatile uint64_t t67 = 1036121994778LLU;
+    	uint32_t x325 = 3U;
+	int32_t x327 = -1;
+	int64_t x328 = -2860682LL;
+	volatile int32_t t67 = -1;
 
-	t67 = ((x3825*(x3826*x3827))>>x3828);
+    t67 = ((x325|(x326-x327))!=x328);
 
-	if (t67 != 128LLU) { NG(); } else { ; }
+    if (t67 != 1) { NG(); } else { ; }
 	
 }
 
 void f68(void) {
-	static uint16_t x3834 = UINT16_MAX;
-	volatile int8_t x3835 = INT8_MIN;
-	volatile int32_t t68 = 78078;
+    	static uint8_t x329 = 0U;
+	uint8_t x330 = UINT8_MAX;
+	uint32_t x331 = 38U;
 
-	t68 = ((x3833*(x3834*x3835))>>x3836);
+    t68 = ((x329|(x330-x331))!=x332);
 
-	if (t68 != 0) { NG(); } else { ; }
+    if (t68 != 1) { NG(); } else { ; }
 	
 }
 
 void f69(void) {
-	int8_t x3913 = -1;
-	int64_t x3914 = INT64_MAX;
-	static volatile int64_t x3915 = -1LL;
-	int64_t t69 = 713780214021264657LL;
+    	static int32_t x333 = INT32_MIN;
+	uint16_t x334 = UINT16_MAX;
+	int8_t x336 = INT8_MAX;
+	int32_t t69 = -372159;
 
-	t69 = ((x3913*(x3914*x3915))>>x3916);
+    t69 = ((x333|(x334-x335))!=x336);
 
-	if (t69 != 2251799813685247LL) { NG(); } else { ; }
+    if (t69 != 1) { NG(); } else { ; }
 	
 }
 
 void f70(void) {
-	uint32_t x3981 = 1453U;
-	uint64_t x3982 = 1608937280026LLU;
-	static int8_t x3983 = INT8_MAX;
-	uint64_t x3984 = 3LLU;
+    	int16_t x341 = INT16_MIN;
+	uint64_t x342 = 28LLU;
+	uint64_t x343 = 3LLU;
+	static int8_t x344 = INT8_MAX;
+	volatile int32_t t70 = -516771418;
 
-	t70 = ((x3981*(x3982*x3983))>>x3984);
+    t70 = ((x341|(x342-x343))!=x344);
 
-	if (t70 != 37112350652559725LLU) { NG(); } else { ; }
+    if (t70 != 1) { NG(); } else { ; }
 	
 }
 
 void f71(void) {
-	int16_t x4005 = INT16_MIN;
-	volatile uint64_t x4007 = 24088447272585LLU;
-	uint64_t t71 = 2641346903238LLU;
+    	int32_t x345 = 0;
+	uint16_t x346 = 123U;
+	int64_t x348 = INT64_MIN;
+	int32_t t71 = 24669110;
 
-	t71 = ((x4005*(x4006*x4007))>>x4008);
+    t71 = ((x345|(x346-x347))!=x348);
 
-	if (t71 != 290677793136LLU) { NG(); } else { ; }
+    if (t71 != 1) { NG(); } else { ; }
 	
 }
 
 void f72(void) {
-	static uint8_t x4013 = 53U;
-	static volatile uint32_t x4014 = 2746233U;
-	int8_t x4015 = 11;
-	uint8_t x4016 = 0U;
-	uint32_t t72 = 109911569U;
+    	int8_t x353 = INT8_MIN;
+	int16_t x354 = -1;
+	volatile int16_t x356 = INT16_MIN;
+	volatile int32_t t72 = -3191587;
 
-	t72 = ((x4013*(x4014*x4015))>>x4016);
+    t72 = ((x353|(x354-x355))!=x356);
 
-	if (t72 != 1601053839U) { NG(); } else { ; }
+    if (t72 != 1) { NG(); } else { ; }
 	
 }
 
 void f73(void) {
-	volatile int8_t x4038 = INT8_MIN;
-	int16_t x4039 = -1;
-	uint8_t x4040 = 29U;
-	int32_t t73 = -1673;
+    	uint32_t x357 = UINT32_MAX;
+	int32_t x358 = 633;
+	uint8_t x359 = 6U;
+	int64_t x360 = 6609511037334251LL;
+	volatile int32_t t73 = 431392748;
 
-	t73 = ((x4037*(x4038*x4039))>>x4040);
+    t73 = ((x357|(x358-x359))!=x360);
 
-	if (t73 != 0) { NG(); } else { ; }
+    if (t73 != 1) { NG(); } else { ; }
 	
 }
 
 void f74(void) {
-	uint32_t x4085 = 3403309U;
-	int32_t x4086 = -27362;
-	volatile uint64_t x4087 = UINT64_MAX;
-	static uint16_t x4088 = 3U;
+    	int32_t x362 = -12211;
+	uint64_t x363 = UINT64_MAX;
+	uint16_t x364 = UINT16_MAX;
+	int32_t t74 = -15124314;
 
-	t74 = ((x4085*(x4086*x4087))>>x4088);
+    t74 = ((x361|(x362-x363))!=x364);
 
-	if (t74 != 11640167607LLU) { NG(); } else { ; }
+    if (t74 != 1) { NG(); } else { ; }
 	
 }
 
 void f75(void) {
-	int16_t x4089 = 6;
-	int64_t x4090 = 5LL;
-	volatile uint64_t x4091 = 689757646LLU;
-	uint64_t t75 = 44715142695LLU;
+    	volatile int16_t x365 = INT16_MAX;
+	static int16_t x366 = -1466;
+	int64_t x367 = INT64_MIN;
 
-	t75 = ((x4089*(x4090*x4091))>>x4092);
+    t75 = ((x365|(x366-x367))!=x368);
 
-	if (t75 != 2586591172LLU) { NG(); } else { ; }
+    if (t75 != 1) { NG(); } else { ; }
 	
 }
 
 void f76(void) {
-	uint32_t x4257 = 212367262U;
-	int8_t x4258 = 52;
-	int8_t x4259 = INT8_MIN;
-	volatile uint8_t x4260 = 1U;
-	static volatile uint32_t t76 = 241U;
+    	int64_t x369 = -1LL;
+	uint32_t x370 = UINT32_MAX;
+	int8_t x371 = -1;
+	int8_t x372 = -1;
+	volatile int32_t t76 = 1474;
 
-	t76 = ((x4257*(x4258*x4259))>>x4260);
+    t76 = ((x369|(x370-x371))!=x372);
 
-	if (t76 != 1911355904U) { NG(); } else { ; }
+    if (t76 != 0) { NG(); } else { ; }
 	
 }
 
 void f77(void) {
-	static volatile int64_t x4277 = -7482LL;
-	uint64_t x4278 = 5466553585857LLU;
-	static int64_t x4279 = INT64_MIN;
-	uint8_t x4280 = 1U;
-	uint64_t t77 = 3LLU;
+    	uint32_t x373 = 0U;
+	uint8_t x374 = 7U;
+	volatile int8_t x375 = -3;
+	static volatile int16_t x376 = INT16_MIN;
+	int32_t t77 = -781;
 
-	t77 = ((x4277*(x4278*x4279))>>x4280);
+    t77 = ((x373|(x374-x375))!=x376);
 
-	if (t77 != 0LLU) { NG(); } else { ; }
+    if (t77 != 1) { NG(); } else { ; }
 	
 }
 
 void f78(void) {
-	int32_t x4293 = INT32_MIN;
-	int8_t x4294 = -1;
-	static uint32_t x4295 = 1283025734U;
-	uint32_t x4296 = 5U;
-	volatile uint32_t t78 = 2040664645U;
+    	int16_t x377 = INT16_MIN;
+	uint16_t x378 = UINT16_MAX;
+	int16_t x379 = -85;
+	int16_t x380 = 100;
 
-	t78 = ((x4293*(x4294*x4295))>>x4296);
+    t78 = ((x377|(x378-x379))!=x380);
 
-	if (t78 != 0U) { NG(); } else { ; }
+    if (t78 != 1) { NG(); } else { ; }
 	
 }
 
 void f79(void) {
-	int32_t x4397 = 314181;
-	int8_t x4399 = INT8_MIN;
-	int8_t x4400 = 1;
-	volatile int64_t t79 = 500334750LL;
+    	int16_t x381 = INT16_MIN;
+	int16_t x382 = INT16_MIN;
+	uint8_t x383 = 0U;
+	uint8_t x384 = UINT8_MAX;
+	volatile int32_t t79 = -537219;
 
-	t79 = ((x4397*(x4398*x4399))>>x4400);
+    t79 = ((x381|(x382-x383))!=x384);
 
-	if (t79 != 20107584LL) { NG(); } else { ; }
+    if (t79 != 1) { NG(); } else { ; }
 	
 }
 
 void f80(void) {
-	volatile int8_t x4542 = -22;
-	int64_t x4543 = -1841061LL;
-	static int16_t x4544 = 54;
-	int64_t t80 = -1035718422LL;
+    	int8_t x385 = -1;
+	uint16_t x387 = 75U;
+	int64_t x388 = 0LL;
 
-	t80 = ((x4541*(x4542*x4543))>>x4544);
+    t80 = ((x385|(x386-x387))!=x388);
 
-	if (t80 != 0LL) { NG(); } else { ; }
+    if (t80 != 1) { NG(); } else { ; }
 	
 }
 
 void f81(void) {
-	static volatile int8_t x4607 = INT8_MIN;
-	uint8_t x4608 = 2U;
-	uint32_t t81 = 49U;
+    	int64_t x390 = -1LL;
+	volatile int64_t x392 = -274372229540LL;
+	volatile int32_t t81 = 28;
 
-	t81 = ((x4605*(x4606*x4607))>>x4608);
+    t81 = ((x389|(x390-x391))!=x392);
 
-	if (t81 != 909001120U) { NG(); } else { ; }
+    if (t81 != 1) { NG(); } else { ; }
 	
 }
 
 void f82(void) {
-	uint64_t x4610 = UINT64_MAX;
-	uint8_t x4612 = 33U;
-	static uint64_t t82 = 66564187711516104LLU;
+    	int8_t x393 = -1;
+	int16_t x394 = INT16_MIN;
+	volatile int8_t x395 = INT8_MIN;
+	uint16_t x396 = 16U;
+	static volatile int32_t t82 = 0;
 
-	t82 = ((x4609*(x4610*x4611))>>x4612);
+    t82 = ((x393|(x394-x395))!=x396);
 
-	if (t82 != 0LLU) { NG(); } else { ; }
+    if (t82 != 1) { NG(); } else { ; }
 	
 }
 
 void f83(void) {
-	int8_t x4617 = -5;
-	uint64_t x4618 = 3LLU;
-	volatile int64_t x4619 = 3LL;
-	uint64_t t83 = 2050116018LLU;
+    	volatile int32_t x397 = INT32_MIN;
+	int8_t x398 = INT8_MIN;
+	uint32_t x399 = 110U;
+	int16_t x400 = -1;
+	volatile int32_t t83 = 8341216;
 
-	t83 = ((x4617*(x4618*x4619))>>x4620);
+    t83 = ((x397|(x398-x399))!=x400);
 
-	if (t83 != 18446744073709551571LLU) { NG(); } else { ; }
+    if (t83 != 1) { NG(); } else { ; }
 	
 }
 
 void f84(void) {
-	int8_t x4682 = 63;
-	int64_t x4684 = 1LL;
-	static int64_t t84 = 274656019289464884LL;
+    	uint32_t x401 = UINT32_MAX;
+	int16_t x402 = 0;
+	int8_t x404 = -14;
 
-	t84 = ((x4681*(x4682*x4683))>>x4684);
+    t84 = ((x401|(x402-x403))!=x404);
 
-	if (t84 != 2607908664439657624LL) { NG(); } else { ; }
+    if (t84 != 1) { NG(); } else { ; }
 	
 }
 
 void f85(void) {
-	uint64_t x4733 = UINT64_MAX;
-	uint8_t x4735 = UINT8_MAX;
-	int8_t x4736 = 1;
+    	static int16_t x405 = -1;
+	int8_t x406 = INT8_MAX;
+	uint64_t x407 = 217242360064LLU;
+	uint32_t x408 = 112121U;
 
-	t85 = ((x4733*(x4734*x4735))>>x4736);
+    t85 = ((x405|(x406-x407))!=x408);
 
-	if (t85 != 9223372036854775043LLU) { NG(); } else { ; }
+    if (t85 != 1) { NG(); } else { ; }
 	
 }
 
 void f86(void) {
-	int8_t x4813 = 1;
-	uint64_t x4815 = 84983048407525683LLU;
-	static uint16_t x4816 = 4U;
-	uint64_t t86 = 1054664193164371308LLU;
+    	uint16_t x413 = 55U;
+	uint16_t x414 = 468U;
+	uint64_t x415 = 10481824LLU;
+	int32_t t86 = -8071957;
 
-	t86 = ((x4813*(x4814*x4815))>>x4816);
+    t86 = ((x413|(x414-x415))!=x416);
 
-	if (t86 != 45864057021294592LLU) { NG(); } else { ; }
+    if (t86 != 1) { NG(); } else { ; }
 	
 }
 
 void f87(void) {
-	static int64_t x4853 = -1LL;
-	static volatile uint32_t x4855 = 188U;
-	volatile uint64_t x4856 = 26LLU;
-	uint64_t t87 = 12LLU;
+    	uint16_t x418 = 3000U;
+	uint32_t x419 = UINT32_MAX;
+	uint32_t x420 = 602228028U;
+	static int32_t t87 = 36623;
 
-	t87 = ((x4853*(x4854*x4855))>>x4856);
+    t87 = ((x417|(x418-x419))!=x420);
 
-	if (t87 != 172333386883LLU) { NG(); } else { ; }
+    if (t87 != 1) { NG(); } else { ; }
 	
 }
 
 void f88(void) {
-	uint64_t x4857 = 6840245796583877LLU;
-	volatile int64_t x4858 = 12097LL;
-	int64_t x4859 = -66226105399LL;
-	int8_t x4860 = 57;
-	volatile uint64_t t88 = 690127740153752973LLU;
+    	volatile int16_t x422 = INT16_MIN;
+	static volatile int64_t x423 = -1LL;
+	int64_t x424 = -1LL;
 
-	t88 = ((x4857*(x4858*x4859))>>x4860);
+    t88 = ((x421|(x422-x423))!=x424);
 
-	if (t88 != 81LLU) { NG(); } else { ; }
+    if (t88 != 1) { NG(); } else { ; }
 	
 }
 
 void f89(void) {
-	uint64_t x5033 = 20843314803LLU;
-	static uint64_t x5034 = UINT64_MAX;
-	static volatile uint64_t t89 = 486626047643LLU;
+    	static int16_t x426 = -1;
+	volatile uint16_t x427 = UINT16_MAX;
+	static uint8_t x428 = UINT8_MAX;
+	static int32_t t89 = 28347;
 
-	t89 = ((x5033*(x5034*x5035))>>x5036);
+    t89 = ((x425|(x426-x427))!=x428);
 
-	if (t89 != 7867189562139738112LLU) { NG(); } else { ; }
+    if (t89 != 1) { NG(); } else { ; }
 	
 }
 
 void f90(void) {
-	static uint8_t x5057 = 23U;
-	static int16_t x5058 = INT16_MIN;
-	uint32_t x5059 = 388133U;
-	uint16_t x5060 = 14U;
-	volatile uint32_t t90 = 3U;
+    	static uint16_t x429 = 7932U;
+	volatile int8_t x430 = INT8_MIN;
+	int16_t x431 = INT16_MIN;
+	int32_t x432 = -736475693;
+	volatile int32_t t90 = -608236;
 
-	t90 = ((x5057*(x5058*x5059))>>x5060);
+    t90 = ((x429|(x430-x431))!=x432);
 
-	if (t90 != 233818U) { NG(); } else { ; }
+    if (t90 != 1) { NG(); } else { ; }
 	
 }
 
 void f91(void) {
-	int64_t x5089 = -1LL;
-	int16_t x5090 = -1;
-	static int64_t x5091 = INT64_MAX;
-	int8_t x5092 = 0;
+    	uint64_t x433 = 300951134521LLU;
+	static uint64_t x434 = 318LLU;
+	static int64_t x435 = INT64_MIN;
+	int8_t x436 = -1;
+	static volatile int32_t t91 = 1508;
 
-	t91 = ((x5089*(x5090*x5091))>>x5092);
+    t91 = ((x433|(x434-x435))!=x436);
 
-	if (t91 != INT64_MAX) { NG(); } else { ; }
+    if (t91 != 1) { NG(); } else { ; }
 	
 }
 
 void f92(void) {
-	int16_t x5189 = 13567;
-	uint64_t x5190 = 9932361418751LLU;
-	static int8_t x5191 = -3;
-	uint64_t t92 = 3882LLU;
+    	volatile uint8_t x437 = 1U;
+	uint8_t x438 = 41U;
+	static uint64_t x439 = UINT64_MAX;
+	uint8_t x440 = 12U;
+	int32_t t92 = 22;
 
-	t92 = ((x5189*(x5190*x5191))>>x5192);
+    t92 = ((x437|(x438-x439))!=x440);
 
-	if (t92 != 2255310878950620895LLU) { NG(); } else { ; }
+    if (t92 != 1) { NG(); } else { ; }
 	
 }
 
 void f93(void) {
-	uint16_t x5265 = 227U;
-	uint8_t x5266 = 3U;
-	uint32_t x5267 = 0U;
-	int8_t x5268 = 11;
-	volatile uint32_t t93 = 3720U;
+    	static int32_t x441 = -55854;
+	volatile int32_t x442 = 261363;
+	static int64_t x443 = 8599LL;
+	uint8_t x444 = UINT8_MAX;
 
-	t93 = ((x5265*(x5266*x5267))>>x5268);
+    t93 = ((x441|(x442-x443))!=x444);
 
-	if (t93 != 0U) { NG(); } else { ; }
+    if (t93 != 1) { NG(); } else { ; }
 	
 }
 
 void f94(void) {
-	volatile uint64_t x5309 = 57449210761527919LLU;
-	uint64_t x5310 = UINT64_MAX;
-	static uint8_t x5311 = UINT8_MAX;
-	uint64_t t94 = 502405194158954LLU;
+    	volatile uint8_t x446 = 20U;
+	volatile int64_t x447 = 0LL;
+	static int16_t x448 = 3;
+	static int32_t t94 = 3552674;
 
-	t94 = ((x5309*(x5310*x5311))>>x5312);
+    t94 = ((x445|(x446-x447))!=x448);
 
-	if (t94 != 949298832379983067LLU) { NG(); } else { ; }
+    if (t94 != 1) { NG(); } else { ; }
 	
 }
 
 void f95(void) {
-	uint32_t x5394 = 5944U;
-	volatile int8_t x5395 = -1;
-	int16_t x5396 = 3;
-	volatile uint32_t t95 = 2466U;
+    	uint16_t x449 = 2972U;
+	static uint32_t x450 = 2846U;
+	static volatile int64_t x451 = -99981LL;
+	volatile int32_t x452 = INT32_MIN;
+	int32_t t95 = -34160488;
 
-	t95 = ((x5393*(x5394*x5395))>>x5396);
+    t95 = ((x449|(x450-x451))!=x452);
 
-	if (t95 != 536864225U) { NG(); } else { ; }
+    if (t95 != 1) { NG(); } else { ; }
 	
 }
 
 void f96(void) {
-	int32_t x5477 = -1;
-	volatile int8_t x5478 = -2;
-	int32_t x5479 = 2217;
-	static uint8_t x5480 = 8U;
-	static volatile int32_t t96 = -234148050;
+    	volatile int32_t x455 = -20271;
+	int16_t x456 = INT16_MIN;
+	volatile int32_t t96 = 47855;
 
-	t96 = ((x5477*(x5478*x5479))>>x5480);
+    t96 = ((x453|(x454-x455))!=x456);
 
-	if (t96 != 17) { NG(); } else { ; }
+    if (t96 != 1) { NG(); } else { ; }
 	
 }
 
 void f97(void) {
-	uint32_t x5481 = 1728729832U;
-	volatile uint64_t x5482 = UINT64_MAX;
-	int16_t x5483 = -1;
-	static uint64_t x5484 = 11LLU;
-	volatile uint64_t t97 = 9437177LLU;
+    	int16_t x458 = -1;
+	volatile int32_t t97 = 0;
 
-	t97 = ((x5481*(x5482*x5483))>>x5484);
+    t97 = ((x457|(x458-x459))!=x460);
 
-	if (t97 != 844106LLU) { NG(); } else { ; }
+    if (t97 != 1) { NG(); } else { ; }
 	
 }
 
 void f98(void) {
-	int32_t x5514 = -10;
-	uint8_t x5516 = 0U;
-	uint64_t t98 = 639763033902LLU;
+    	static uint64_t x461 = UINT64_MAX;
+	uint32_t x462 = UINT32_MAX;
+	int16_t x463 = -14;
+	int64_t x464 = INT64_MAX;
+	int32_t t98 = 1040;
 
-	t98 = ((x5513*(x5514*x5515))>>x5516);
+    t98 = ((x461|(x462-x463))!=x464);
 
-	if (t98 != 18446744065151565036LLU) { NG(); } else { ; }
+    if (t98 != 1) { NG(); } else { ; }
 	
 }
 
 void f99(void) {
-	volatile int64_t x5598 = -1LL;
-	uint8_t x5599 = UINT8_MAX;
-	volatile uint64_t t99 = 136417429575014121LLU;
+    	volatile uint64_t x465 = 127LLU;
+	volatile uint8_t x466 = 1U;
+	int64_t x467 = 69802LL;
+	static int16_t x468 = -1;
+	int32_t t99 = 27911;
 
-	t99 = ((x5597*(x5598*x5599))>>x5600);
+    t99 = ((x465|(x466-x467))!=x468);
 
-	if (t99 != 15LLU) { NG(); } else { ; }
+    if (t99 != 1) { NG(); } else { ; }
+	
+}
+
+void f100(void) {
+    	volatile int64_t x473 = INT64_MIN;
+	volatile uint8_t x474 = 19U;
+	volatile int8_t x475 = INT8_MIN;
+	static volatile int32_t t100 = 7;
+
+    t100 = ((x473|(x474-x475))!=x476);
+
+    if (t100 != 1) { NG(); } else { ; }
+	
+}
+
+void f101(void) {
+    	static volatile int32_t x477 = 50;
+	int32_t x478 = -1;
+	int64_t x479 = INT64_MIN;
+	volatile uint16_t x480 = UINT16_MAX;
+	volatile int32_t t101 = -86;
+
+    t101 = ((x477|(x478-x479))!=x480);
+
+    if (t101 != 1) { NG(); } else { ; }
+	
+}
+
+void f102(void) {
+    	int64_t x482 = 11310LL;
+	static int16_t x483 = INT16_MAX;
+	static volatile int64_t x484 = -66878631002475LL;
+	static int32_t t102 = 4;
+
+    t102 = ((x481|(x482-x483))!=x484);
+
+    if (t102 != 1) { NG(); } else { ; }
+	
+}
+
+void f103(void) {
+    	int64_t x485 = INT64_MIN;
+	uint8_t x486 = 0U;
+	static int32_t t103 = 997;
+
+    t103 = ((x485|(x486-x487))!=x488);
+
+    if (t103 != 1) { NG(); } else { ; }
+	
+}
+
+void f104(void) {
+    	int32_t x489 = 583076223;
+	int32_t x490 = -1;
+	int64_t x491 = INT64_MIN;
+	int64_t x492 = INT64_MIN;
+	volatile int32_t t104 = 71570;
+
+    t104 = ((x489|(x490-x491))!=x492);
+
+    if (t104 != 1) { NG(); } else { ; }
+	
+}
+
+void f105(void) {
+    	int64_t x497 = INT64_MIN;
+	int16_t x498 = -1;
+	static int16_t x499 = 0;
+	volatile uint16_t x500 = 2049U;
+	static int32_t t105 = -227508624;
+
+    t105 = ((x497|(x498-x499))!=x500);
+
+    if (t105 != 1) { NG(); } else { ; }
+	
+}
+
+void f106(void) {
+    	int64_t x505 = INT64_MIN;
+	static volatile int64_t x506 = 655576126920972LL;
+	volatile int8_t x507 = INT8_MAX;
+	int16_t x508 = -125;
+	int32_t t106 = 520567;
+
+    t106 = ((x505|(x506-x507))!=x508);
+
+    if (t106 != 1) { NG(); } else { ; }
+	
+}
+
+void f107(void) {
+    	int8_t x509 = INT8_MAX;
+	uint8_t x510 = 6U;
+	uint16_t x512 = 29U;
+	int32_t t107 = -1424;
+
+    t107 = ((x509|(x510-x511))!=x512);
+
+    if (t107 != 1) { NG(); } else { ; }
+	
+}
+
+void f108(void) {
+    	int64_t x513 = INT64_MIN;
+	uint64_t x515 = UINT64_MAX;
+	uint64_t x516 = UINT64_MAX;
+	int32_t t108 = -1148;
+
+    t108 = ((x513|(x514-x515))!=x516);
+
+    if (t108 != 1) { NG(); } else { ; }
+	
+}
+
+void f109(void) {
+    	volatile int64_t x517 = -111LL;
+	volatile uint16_t x518 = 96U;
+	uint64_t x519 = UINT64_MAX;
+	int32_t t109 = -14485;
+
+    t109 = ((x517|(x518-x519))!=x520);
+
+    if (t109 != 1) { NG(); } else { ; }
+	
+}
+
+void f110(void) {
+    	uint16_t x521 = 48U;
+	volatile int16_t x522 = INT16_MIN;
+	int32_t t110 = 197031790;
+
+    t110 = ((x521|(x522-x523))!=x524);
+
+    if (t110 != 1) { NG(); } else { ; }
+	
+}
+
+void f111(void) {
+    	int32_t x525 = -1;
+	volatile uint64_t x526 = 277LLU;
+	int8_t x528 = -1;
+
+    t111 = ((x525|(x526-x527))!=x528);
+
+    if (t111 != 0) { NG(); } else { ; }
+	
+}
+
+void f112(void) {
+    	int32_t x529 = -1;
+	int32_t x530 = -41175;
+	int64_t x531 = INT64_MIN;
+	static uint64_t x532 = 30445474845LLU;
+	volatile int32_t t112 = 420107;
+
+    t112 = ((x529|(x530-x531))!=x532);
+
+    if (t112 != 1) { NG(); } else { ; }
+	
+}
+
+void f113(void) {
+    	static uint32_t x533 = 7336U;
+	uint8_t x535 = 24U;
+	uint16_t x536 = UINT16_MAX;
+	volatile int32_t t113 = 256581388;
+
+    t113 = ((x533|(x534-x535))!=x536);
+
+    if (t113 != 1) { NG(); } else { ; }
+	
+}
+
+void f114(void) {
+    	int16_t x537 = INT16_MIN;
+	static int32_t x538 = -1;
+	volatile int16_t x539 = -1;
+	uint16_t x540 = 683U;
+	static int32_t t114 = -5;
+
+    t114 = ((x537|(x538-x539))!=x540);
+
+    if (t114 != 1) { NG(); } else { ; }
+	
+}
+
+void f115(void) {
+    	uint16_t x541 = UINT16_MAX;
+	int8_t x542 = INT8_MIN;
+	volatile int8_t x543 = INT8_MIN;
+	int64_t x544 = INT64_MIN;
+	int32_t t115 = -28763814;
+
+    t115 = ((x541|(x542-x543))!=x544);
+
+    if (t115 != 1) { NG(); } else { ; }
+	
+}
+
+void f116(void) {
+    	uint8_t x546 = 7U;
+	int16_t x548 = 8;
+	static int32_t t116 = -470;
+
+    t116 = ((x545|(x546-x547))!=x548);
+
+    if (t116 != 1) { NG(); } else { ; }
+	
+}
+
+void f117(void) {
+    	int32_t x549 = INT32_MIN;
+	int16_t x550 = -1;
+	static int8_t x551 = INT8_MIN;
+	volatile int32_t x552 = -1;
+	volatile int32_t t117 = -37;
+
+    t117 = ((x549|(x550-x551))!=x552);
+
+    if (t117 != 1) { NG(); } else { ; }
+	
+}
+
+void f118(void) {
+    	int16_t x554 = INT16_MIN;
+	int32_t x555 = -1;
+	int32_t t118 = 441538;
+
+    t118 = ((x553|(x554-x555))!=x556);
+
+    if (t118 != 1) { NG(); } else { ; }
+	
+}
+
+void f119(void) {
+    	static volatile int16_t x561 = INT16_MIN;
+	int8_t x563 = -3;
+	int32_t t119 = 5;
+
+    t119 = ((x561|(x562-x563))!=x564);
+
+    if (t119 != 1) { NG(); } else { ; }
+	
+}
+
+void f120(void) {
+    	uint16_t x565 = UINT16_MAX;
+	int64_t x566 = -1LL;
+	uint16_t x567 = 17490U;
+	uint8_t x568 = UINT8_MAX;
+	static volatile int32_t t120 = -41767;
+
+    t120 = ((x565|(x566-x567))!=x568);
+
+    if (t120 != 1) { NG(); } else { ; }
+	
+}
+
+void f121(void) {
+    	int32_t x569 = INT32_MIN;
+	int16_t x571 = INT16_MIN;
+	uint32_t x572 = 7488U;
+
+    t121 = ((x569|(x570-x571))!=x572);
+
+    if (t121 != 1) { NG(); } else { ; }
+	
+}
+
+void f122(void) {
+    	static int16_t x573 = INT16_MIN;
+	int32_t x574 = -1;
+	int16_t x576 = INT16_MAX;
+
+    t122 = ((x573|(x574-x575))!=x576);
+
+    if (t122 != 1) { NG(); } else { ; }
+	
+}
+
+void f123(void) {
+    	int16_t x577 = INT16_MIN;
+	volatile uint64_t x578 = 513866851739342421LLU;
+	int64_t x579 = -434895197128394995LL;
+
+    t123 = ((x577|(x578-x579))!=x580);
+
+    if (t123 != 1) { NG(); } else { ; }
+	
+}
+
+void f124(void) {
+    	static int32_t x581 = INT32_MIN;
+	int32_t x582 = 3854188;
+	int8_t x583 = INT8_MAX;
+	static uint64_t x584 = UINT64_MAX;
+
+    t124 = ((x581|(x582-x583))!=x584);
+
+    if (t124 != 1) { NG(); } else { ; }
+	
+}
+
+void f125(void) {
+    	int16_t x585 = 8034;
+	int16_t x586 = INT16_MIN;
+	uint32_t x587 = 28U;
+	int8_t x588 = INT8_MAX;
+	static int32_t t125 = -1676063;
+
+    t125 = ((x585|(x586-x587))!=x588);
+
+    if (t125 != 1) { NG(); } else { ; }
+	
+}
+
+void f126(void) {
+    	uint16_t x589 = 1174U;
+	uint32_t x590 = 1966U;
+
+    t126 = ((x589|(x590-x591))!=x592);
+
+    if (t126 != 1) { NG(); } else { ; }
+	
+}
+
+void f127(void) {
+    	int64_t x593 = INT64_MIN;
+	static int8_t x595 = 20;
+	int8_t x596 = INT8_MAX;
+	volatile int32_t t127 = 907;
+
+    t127 = ((x593|(x594-x595))!=x596);
+
+    if (t127 != 1) { NG(); } else { ; }
+	
+}
+
+void f128(void) {
+    	int64_t x597 = -324LL;
+	int16_t x598 = -1;
+	volatile uint16_t x599 = 9U;
+	int64_t x600 = INT64_MIN;
+	int32_t t128 = 27;
+
+    t128 = ((x597|(x598-x599))!=x600);
+
+    if (t128 != 1) { NG(); } else { ; }
+	
+}
+
+void f129(void) {
+    	int16_t x601 = 12;
+	int32_t x602 = 4162170;
+	static int64_t x604 = INT64_MIN;
+	static volatile int32_t t129 = 763168;
+
+    t129 = ((x601|(x602-x603))!=x604);
+
+    if (t129 != 1) { NG(); } else { ; }
+	
+}
+
+void f130(void) {
+    	static int16_t x605 = -11931;
+	static uint32_t x606 = 81526U;
+	static int32_t x607 = -1030392;
+	static int8_t x608 = INT8_MAX;
+	volatile int32_t t130 = 104155631;
+
+    t130 = ((x605|(x606-x607))!=x608);
+
+    if (t130 != 1) { NG(); } else { ; }
+	
+}
+
+void f131(void) {
+    	int8_t x610 = INT8_MAX;
+	uint32_t x611 = 510U;
+	uint8_t x612 = UINT8_MAX;
+
+    t131 = ((x609|(x610-x611))!=x612);
+
+    if (t131 != 1) { NG(); } else { ; }
+	
+}
+
+void f132(void) {
+    	uint32_t x616 = UINT32_MAX;
+	volatile int32_t t132 = 25960;
+
+    t132 = ((x613|(x614-x615))!=x616);
+
+    if (t132 != 1) { NG(); } else { ; }
+	
+}
+
+void f133(void) {
+    	static int64_t x617 = INT64_MIN;
+	volatile int8_t x618 = INT8_MAX;
+	volatile int32_t x619 = -459301692;
+	volatile int8_t x620 = INT8_MAX;
+	static int32_t t133 = -484400;
+
+    t133 = ((x617|(x618-x619))!=x620);
+
+    if (t133 != 1) { NG(); } else { ; }
+	
+}
+
+void f134(void) {
+    	uint32_t x621 = 3788U;
+	int32_t x622 = 107;
+	static uint8_t x623 = 0U;
+	int32_t t134 = -1360;
+
+    t134 = ((x621|(x622-x623))!=x624);
+
+    if (t134 != 1) { NG(); } else { ; }
+	
+}
+
+void f135(void) {
+    	uint32_t x626 = 3U;
+	volatile int32_t x627 = INT32_MAX;
+	uint8_t x628 = 3U;
+	static int32_t t135 = -106246;
+
+    t135 = ((x625|(x626-x627))!=x628);
+
+    if (t135 != 1) { NG(); } else { ; }
+	
+}
+
+void f136(void) {
+    	int32_t x629 = INT32_MIN;
+	static int16_t x631 = 13206;
+	int16_t x632 = INT16_MIN;
+	static volatile int32_t t136 = -10;
+
+    t136 = ((x629|(x630-x631))!=x632);
+
+    if (t136 != 1) { NG(); } else { ; }
+	
+}
+
+void f137(void) {
+    	int32_t x633 = -1;
+	uint8_t x634 = 1U;
+	uint16_t x635 = UINT16_MAX;
+	static uint16_t x636 = 22601U;
+	volatile int32_t t137 = 1;
+
+    t137 = ((x633|(x634-x635))!=x636);
+
+    if (t137 != 1) { NG(); } else { ; }
+	
+}
+
+void f138(void) {
+    	static int16_t x637 = 9047;
+	int16_t x638 = -1;
+	int32_t x639 = INT32_MAX;
+	uint64_t x640 = 83LLU;
+
+    t138 = ((x637|(x638-x639))!=x640);
+
+    if (t138 != 1) { NG(); } else { ; }
+	
+}
+
+void f139(void) {
+    	uint64_t x641 = 1987199284114438LLU;
+	static int32_t x642 = 29926;
+	static uint32_t x643 = 1894266133U;
+	int64_t x644 = -1783827896854439LL;
+	volatile int32_t t139 = 459210;
+
+    t139 = ((x641|(x642-x643))!=x644);
+
+    if (t139 != 1) { NG(); } else { ; }
+	
+}
+
+void f140(void) {
+    	int64_t x646 = INT64_MAX;
+	static uint16_t x647 = UINT16_MAX;
+	static int64_t x648 = 114382LL;
+	int32_t t140 = -223692663;
+
+    t140 = ((x645|(x646-x647))!=x648);
+
+    if (t140 != 1) { NG(); } else { ; }
+	
+}
+
+void f141(void) {
+    	static int32_t x653 = INT32_MAX;
+	uint16_t x655 = 91U;
+	int64_t x656 = 1110LL;
+	int32_t t141 = -7435;
+
+    t141 = ((x653|(x654-x655))!=x656);
+
+    if (t141 != 1) { NG(); } else { ; }
+	
+}
+
+void f142(void) {
+    	volatile int16_t x657 = 8398;
+	int32_t x658 = INT32_MAX;
+	int16_t x659 = 0;
+	volatile uint8_t x660 = 3U;
+
+    t142 = ((x657|(x658-x659))!=x660);
+
+    if (t142 != 1) { NG(); } else { ; }
+	
+}
+
+void f143(void) {
+    	int8_t x661 = INT8_MIN;
+	static uint16_t x662 = 885U;
+	int64_t x664 = INT64_MIN;
+	int32_t t143 = -170670059;
+
+    t143 = ((x661|(x662-x663))!=x664);
+
+    if (t143 != 1) { NG(); } else { ; }
+	
+}
+
+void f144(void) {
+    	int64_t x665 = INT64_MIN;
+	uint16_t x668 = 5130U;
+	volatile int32_t t144 = -1;
+
+    t144 = ((x665|(x666-x667))!=x668);
+
+    if (t144 != 1) { NG(); } else { ; }
+	
+}
+
+void f145(void) {
+    	int64_t x669 = -826424038053LL;
+	int32_t x670 = INT32_MAX;
+	int32_t x671 = 29057;
+	static uint64_t x672 = 4LLU;
+	volatile int32_t t145 = 0;
+
+    t145 = ((x669|(x670-x671))!=x672);
+
+    if (t145 != 1) { NG(); } else { ; }
+	
+}
+
+void f146(void) {
+    	int8_t x673 = -1;
+	int64_t x674 = -4027206773532LL;
+	uint64_t x676 = 24LLU;
+	int32_t t146 = 1;
+
+    t146 = ((x673|(x674-x675))!=x676);
+
+    if (t146 != 1) { NG(); } else { ; }
+	
+}
+
+void f147(void) {
+    	int8_t x677 = -6;
+	int8_t x678 = INT8_MAX;
+	static uint8_t x679 = UINT8_MAX;
+	uint16_t x680 = 12U;
+
+    t147 = ((x677|(x678-x679))!=x680);
+
+    if (t147 != 1) { NG(); } else { ; }
+	
+}
+
+void f148(void) {
+    	int16_t x681 = 15;
+	volatile int8_t x682 = INT8_MIN;
+	uint32_t x683 = 1U;
+	int32_t x684 = 259;
+	static volatile int32_t t148 = 501971705;
+
+    t148 = ((x681|(x682-x683))!=x684);
+
+    if (t148 != 1) { NG(); } else { ; }
+	
+}
+
+void f149(void) {
+    	volatile int8_t x689 = INT8_MAX;
+	int16_t x690 = -551;
+	uint64_t x691 = 28482126LLU;
+	int32_t t149 = -2;
+
+    t149 = ((x689|(x690-x691))!=x692);
+
+    if (t149 != 1) { NG(); } else { ; }
+	
+}
+
+void f150(void) {
+    	static int8_t x693 = INT8_MIN;
+	static uint64_t x695 = 177840LLU;
+	int64_t x696 = -1LL;
+	volatile int32_t t150 = 851983;
+
+    t150 = ((x693|(x694-x695))!=x696);
+
+    if (t150 != 1) { NG(); } else { ; }
+	
+}
+
+void f151(void) {
+    	int32_t x697 = INT32_MIN;
+	int64_t x698 = INT64_MIN;
+	int8_t x699 = INT8_MIN;
+	uint64_t x700 = UINT64_MAX;
+	int32_t t151 = -11740364;
+
+    t151 = ((x697|(x698-x699))!=x700);
+
+    if (t151 != 1) { NG(); } else { ; }
+	
+}
+
+void f152(void) {
+    	static int64_t x701 = 1381986LL;
+	static int32_t x704 = INT32_MIN;
+	static volatile int32_t t152 = 27122;
+
+    t152 = ((x701|(x702-x703))!=x704);
+
+    if (t152 != 1) { NG(); } else { ; }
+	
+}
+
+void f153(void) {
+    	uint8_t x705 = 6U;
+	int16_t x706 = INT16_MIN;
+	volatile uint32_t x707 = 10595902U;
+	volatile int64_t x708 = -848LL;
+
+    t153 = ((x705|(x706-x707))!=x708);
+
+    if (t153 != 1) { NG(); } else { ; }
+	
+}
+
+void f154(void) {
+    	uint32_t x709 = 9U;
+	int32_t x710 = INT32_MAX;
+	volatile uint32_t x711 = 100204U;
+	volatile int64_t x712 = INT64_MIN;
+	static volatile int32_t t154 = -7684568;
+
+    t154 = ((x709|(x710-x711))!=x712);
+
+    if (t154 != 1) { NG(); } else { ; }
+	
+}
+
+void f155(void) {
+    	volatile int16_t x713 = INT16_MIN;
+	static uint64_t x714 = 59439756391345851LLU;
+	volatile uint64_t x715 = UINT64_MAX;
+	static int16_t x716 = 0;
+	static int32_t t155 = 3641741;
+
+    t155 = ((x713|(x714-x715))!=x716);
+
+    if (t155 != 1) { NG(); } else { ; }
+	
+}
+
+void f156(void) {
+    	int64_t x718 = INT64_MIN;
+	int32_t x720 = INT32_MIN;
+	volatile int32_t t156 = 638;
+
+    t156 = ((x717|(x718-x719))!=x720);
+
+    if (t156 != 1) { NG(); } else { ; }
+	
+}
+
+void f157(void) {
+    	int16_t x721 = INT16_MIN;
+	int16_t x722 = -1;
+	static int8_t x723 = 35;
+	static volatile uint8_t x724 = UINT8_MAX;
+	volatile int32_t t157 = 288;
+
+    t157 = ((x721|(x722-x723))!=x724);
+
+    if (t157 != 1) { NG(); } else { ; }
+	
+}
+
+void f158(void) {
+    	static volatile int32_t x729 = 3;
+	int32_t x732 = INT32_MIN;
+	int32_t t158 = 24090;
+
+    t158 = ((x729|(x730-x731))!=x732);
+
+    if (t158 != 1) { NG(); } else { ; }
+	
+}
+
+void f159(void) {
+    	uint8_t x733 = 1U;
+	int64_t x734 = INT64_MIN;
+	uint64_t x735 = 27527000597693LLU;
+	static uint8_t x736 = 2U;
+	volatile int32_t t159 = 6203495;
+
+    t159 = ((x733|(x734-x735))!=x736);
+
+    if (t159 != 1) { NG(); } else { ; }
+	
+}
+
+void f160(void) {
+    	uint32_t x737 = 112282891U;
+	int16_t x738 = -1;
+	static int8_t x740 = 3;
+	volatile int32_t t160 = -509881;
+
+    t160 = ((x737|(x738-x739))!=x740);
+
+    if (t160 != 1) { NG(); } else { ; }
+	
+}
+
+void f161(void) {
+    	uint8_t x741 = 32U;
+	volatile uint16_t x742 = UINT16_MAX;
+	static volatile int16_t x744 = INT16_MIN;
+	volatile int32_t t161 = -964;
+
+    t161 = ((x741|(x742-x743))!=x744);
+
+    if (t161 != 1) { NG(); } else { ; }
+	
+}
+
+void f162(void) {
+    	volatile int64_t x745 = 36820065642255LL;
+	int64_t x747 = INT64_MIN;
+	volatile int64_t x748 = 8529196LL;
+
+    t162 = ((x745|(x746-x747))!=x748);
+
+    if (t162 != 1) { NG(); } else { ; }
+	
+}
+
+void f163(void) {
+    	int32_t x749 = INT32_MIN;
+	volatile uint16_t x750 = UINT16_MAX;
+	static int16_t x751 = INT16_MAX;
+	int32_t t163 = -89685930;
+
+    t163 = ((x749|(x750-x751))!=x752);
+
+    if (t163 != 1) { NG(); } else { ; }
+	
+}
+
+void f164(void) {
+    	int8_t x755 = -1;
+	int16_t x756 = -1;
+	volatile int32_t t164 = -30039;
+
+    t164 = ((x753|(x754-x755))!=x756);
+
+    if (t164 != 1) { NG(); } else { ; }
+	
+}
+
+void f165(void) {
+    	int64_t x757 = -192626LL;
+	uint32_t x758 = 22U;
+	uint8_t x759 = 27U;
+	static volatile int64_t x760 = -307205877875136842LL;
+	int32_t t165 = 396347;
+
+    t165 = ((x757|(x758-x759))!=x760);
+
+    if (t165 != 1) { NG(); } else { ; }
+	
+}
+
+void f166(void) {
+    	static uint64_t x761 = 1471404935761045LLU;
+	int16_t x762 = 0;
+	uint8_t x763 = 10U;
+	volatile uint64_t x764 = 238938570LLU;
+	volatile int32_t t166 = -19;
+
+    t166 = ((x761|(x762-x763))!=x764);
+
+    if (t166 != 1) { NG(); } else { ; }
+	
+}
+
+void f167(void) {
+    	uint16_t x765 = 110U;
+	static int64_t x766 = INT64_MIN;
+	uint64_t x767 = UINT64_MAX;
+	static int32_t x768 = 25;
+	int32_t t167 = 63;
+
+    t167 = ((x765|(x766-x767))!=x768);
+
+    if (t167 != 1) { NG(); } else { ; }
+	
+}
+
+void f168(void) {
+    	int16_t x769 = 74;
+	int8_t x771 = INT8_MIN;
+	int64_t x772 = INT64_MIN;
+	volatile int32_t t168 = -5;
+
+    t168 = ((x769|(x770-x771))!=x772);
+
+    if (t168 != 1) { NG(); } else { ; }
+	
+}
+
+void f169(void) {
+    	volatile int64_t x773 = -4859363448410LL;
+	int8_t x774 = -23;
+	int32_t x775 = INT32_MIN;
+	int32_t t169 = 4130142;
+
+    t169 = ((x773|(x774-x775))!=x776);
+
+    if (t169 != 1) { NG(); } else { ; }
+	
+}
+
+void f170(void) {
+    	volatile int16_t x777 = -1;
+	static uint8_t x778 = UINT8_MAX;
+	uint64_t x779 = 6042335077LLU;
+	volatile int32_t t170 = -9436;
+
+    t170 = ((x777|(x778-x779))!=x780);
+
+    if (t170 != 1) { NG(); } else { ; }
+	
+}
+
+void f171(void) {
+    	uint64_t x781 = 1659365954882634613LLU;
+	int64_t x782 = INT64_MIN;
+	volatile int32_t x784 = 5117939;
+	int32_t t171 = 87;
+
+    t171 = ((x781|(x782-x783))!=x784);
+
+    if (t171 != 1) { NG(); } else { ; }
+	
+}
+
+void f172(void) {
+    	uint8_t x785 = 86U;
+	int64_t x786 = -1LL;
+	uint8_t x787 = UINT8_MAX;
+	int32_t t172 = 20311962;
+
+    t172 = ((x785|(x786-x787))!=x788);
+
+    if (t172 != 1) { NG(); } else { ; }
+	
+}
+
+void f173(void) {
+    	uint8_t x789 = 41U;
+	static int64_t x792 = 188505678678610170LL;
+	volatile int32_t t173 = -506888718;
+
+    t173 = ((x789|(x790-x791))!=x792);
+
+    if (t173 != 1) { NG(); } else { ; }
+	
+}
+
+void f174(void) {
+    	int64_t x794 = -1LL;
+	int8_t x796 = INT8_MAX;
+	static int32_t t174 = 258;
+
+    t174 = ((x793|(x794-x795))!=x796);
+
+    if (t174 != 1) { NG(); } else { ; }
+	
+}
+
+void f175(void) {
+    	int16_t x797 = 1;
+	static int64_t x798 = -1LL;
+	volatile uint32_t x799 = UINT32_MAX;
+	uint64_t x800 = UINT64_MAX;
+
+    t175 = ((x797|(x798-x799))!=x800);
+
+    if (t175 != 1) { NG(); } else { ; }
+	
+}
+
+void f176(void) {
+    	uint32_t x801 = UINT32_MAX;
+	volatile int16_t x802 = INT16_MAX;
+	static int16_t x803 = INT16_MIN;
+	uint64_t x804 = 646802669156943393LLU;
+	static int32_t t176 = -99;
+
+    t176 = ((x801|(x802-x803))!=x804);
+
+    if (t176 != 1) { NG(); } else { ; }
+	
+}
+
+void f177(void) {
+    	volatile int16_t x805 = -1;
+	uint16_t x807 = 15195U;
+	int32_t t177 = 1781;
+
+    t177 = ((x805|(x806-x807))!=x808);
+
+    if (t177 != 1) { NG(); } else { ; }
+	
+}
+
+void f178(void) {
+    	uint64_t x812 = 159613LLU;
+	static int32_t t178 = 17851;
+
+    t178 = ((x809|(x810-x811))!=x812);
+
+    if (t178 != 1) { NG(); } else { ; }
+	
+}
+
+void f179(void) {
+    	uint32_t x814 = 79227864U;
+	int16_t x816 = INT16_MAX;
+	volatile int32_t t179 = 7;
+
+    t179 = ((x813|(x814-x815))!=x816);
+
+    if (t179 != 1) { NG(); } else { ; }
+	
+}
+
+void f180(void) {
+    	int32_t x817 = -1;
+	int16_t x818 = INT16_MIN;
+	int8_t x819 = INT8_MAX;
+	volatile uint64_t x820 = 2LLU;
+	int32_t t180 = -1;
+
+    t180 = ((x817|(x818-x819))!=x820);
+
+    if (t180 != 1) { NG(); } else { ; }
+	
+}
+
+void f181(void) {
+    	uint16_t x821 = 508U;
+	uint32_t x823 = 709707U;
+	static int16_t x824 = INT16_MIN;
+	volatile int32_t t181 = 4300;
+
+    t181 = ((x821|(x822-x823))!=x824);
+
+    if (t181 != 1) { NG(); } else { ; }
+	
+}
+
+void f182(void) {
+    	int16_t x825 = INT16_MIN;
+	int8_t x826 = INT8_MAX;
+	static int64_t x827 = 26780LL;
+	int8_t x828 = -8;
+	volatile int32_t t182 = 2984;
+
+    t182 = ((x825|(x826-x827))!=x828);
+
+    if (t182 != 1) { NG(); } else { ; }
+	
+}
+
+void f183(void) {
+    	volatile int32_t t183 = 30;
+
+    t183 = ((x829|(x830-x831))!=x832);
+
+    if (t183 != 1) { NG(); } else { ; }
+	
+}
+
+void f184(void) {
+    	int32_t x834 = INT32_MIN;
+	static int64_t x835 = 7236006678LL;
+	static int32_t x836 = 240;
+	int32_t t184 = -126729;
+
+    t184 = ((x833|(x834-x835))!=x836);
+
+    if (t184 != 1) { NG(); } else { ; }
+	
+}
+
+void f185(void) {
+    	uint16_t x838 = 1597U;
+	uint64_t x839 = 806237118116LLU;
+	int32_t t185 = -187318350;
+
+    t185 = ((x837|(x838-x839))!=x840);
+
+    if (t185 != 1) { NG(); } else { ; }
+	
+}
+
+void f186(void) {
+    	uint16_t x842 = UINT16_MAX;
+	volatile uint32_t x844 = 3933U;
+	volatile int32_t t186 = -746;
+
+    t186 = ((x841|(x842-x843))!=x844);
+
+    if (t186 != 1) { NG(); } else { ; }
+	
+}
+
+void f187(void) {
+    	int64_t x845 = INT64_MIN;
+	int32_t x846 = INT32_MAX;
+	int16_t x847 = INT16_MAX;
+	uint64_t x848 = 112369282326LLU;
+	int32_t t187 = 15719094;
+
+    t187 = ((x845|(x846-x847))!=x848);
+
+    if (t187 != 1) { NG(); } else { ; }
+	
+}
+
+void f188(void) {
+    	static uint32_t x851 = UINT32_MAX;
+	volatile int64_t x852 = -1LL;
+	volatile int32_t t188 = 641001;
+
+    t188 = ((x849|(x850-x851))!=x852);
+
+    if (t188 != 1) { NG(); } else { ; }
+	
+}
+
+void f189(void) {
+    	int64_t x853 = -357363903364373LL;
+	int32_t x854 = -1;
+	int16_t x855 = 4896;
+	volatile int32_t x856 = INT32_MIN;
+	int32_t t189 = 441460;
+
+    t189 = ((x853|(x854-x855))!=x856);
+
+    if (t189 != 1) { NG(); } else { ; }
+	
+}
+
+void f190(void) {
+    	int32_t x857 = INT32_MIN;
+	static volatile int16_t x858 = 949;
+	volatile int32_t t190 = 5;
+
+    t190 = ((x857|(x858-x859))!=x860);
+
+    if (t190 != 1) { NG(); } else { ; }
+	
+}
+
+void f191(void) {
+    	static int32_t x861 = INT32_MIN;
+	volatile int32_t x862 = INT32_MIN;
+	uint16_t x864 = UINT16_MAX;
+
+    t191 = ((x861|(x862-x863))!=x864);
+
+    if (t191 != 1) { NG(); } else { ; }
+	
+}
+
+void f192(void) {
+    	int8_t x865 = INT8_MAX;
+	static int8_t x866 = INT8_MIN;
+	static int64_t x867 = -12030456LL;
+	static int32_t x868 = -1;
+	int32_t t192 = -307;
+
+    t192 = ((x865|(x866-x867))!=x868);
+
+    if (t192 != 1) { NG(); } else { ; }
+	
+}
+
+void f193(void) {
+    	uint16_t x869 = 2U;
+	int8_t x870 = INT8_MIN;
+	static int8_t x871 = INT8_MAX;
+	volatile int64_t x872 = INT64_MIN;
+	volatile int32_t t193 = 53;
+
+    t193 = ((x869|(x870-x871))!=x872);
+
+    if (t193 != 1) { NG(); } else { ; }
+	
+}
+
+void f194(void) {
+    	uint8_t x873 = UINT8_MAX;
+	int16_t x874 = INT16_MAX;
+	volatile int16_t x875 = -1;
+	volatile uint32_t x876 = 503889U;
+
+    t194 = ((x873|(x874-x875))!=x876);
+
+    if (t194 != 1) { NG(); } else { ; }
+	
+}
+
+void f195(void) {
+    	int16_t x877 = INT16_MIN;
+	static int32_t x878 = INT32_MIN;
+	uint32_t x879 = 55U;
+	uint8_t x880 = UINT8_MAX;
+	volatile int32_t t195 = 304327;
+
+    t195 = ((x877|(x878-x879))!=x880);
+
+    if (t195 != 1) { NG(); } else { ; }
+	
+}
+
+void f196(void) {
+    	volatile int32_t x881 = INT32_MIN;
+	int8_t x882 = -1;
+	int64_t x884 = INT64_MIN;
+
+    t196 = ((x881|(x882-x883))!=x884);
+
+    if (t196 != 1) { NG(); } else { ; }
+	
+}
+
+void f197(void) {
+    	int32_t x885 = 109;
+	static int32_t x887 = 7;
+	static uint8_t x888 = 9U;
+
+    t197 = ((x885|(x886-x887))!=x888);
+
+    if (t197 != 1) { NG(); } else { ; }
+	
+}
+
+void f198(void) {
+    	int64_t x889 = -1LL;
+	uint32_t x892 = 700570U;
+	static volatile int32_t t198 = -1293332;
+
+    t198 = ((x889|(x890-x891))!=x892);
+
+    if (t198 != 1) { NG(); } else { ; }
+	
+}
+
+void f199(void) {
+    	static volatile int16_t x893 = INT16_MIN;
+	int8_t x894 = INT8_MIN;
+	uint32_t x895 = 2U;
+	static uint8_t x896 = UINT8_MAX;
+	int32_t t199 = 23;
+
+    t199 = ((x893|(x894-x895))!=x896);
+
+    if (t199 != 1) { NG(); } else { ; }
 	
 }
 
 int main(void) {
-    f0();
+        f0();
     f1();
     f2();
     f3();
@@ -1406,6 +2716,106 @@ int main(void) {
     f97();
     f98();
     f99();
+    f100();
+    f101();
+    f102();
+    f103();
+    f104();
+    f105();
+    f106();
+    f107();
+    f108();
+    f109();
+    f110();
+    f111();
+    f112();
+    f113();
+    f114();
+    f115();
+    f116();
+    f117();
+    f118();
+    f119();
+    f120();
+    f121();
+    f122();
+    f123();
+    f124();
+    f125();
+    f126();
+    f127();
+    f128();
+    f129();
+    f130();
+    f131();
+    f132();
+    f133();
+    f134();
+    f135();
+    f136();
+    f137();
+    f138();
+    f139();
+    f140();
+    f141();
+    f142();
+    f143();
+    f144();
+    f145();
+    f146();
+    f147();
+    f148();
+    f149();
+    f150();
+    f151();
+    f152();
+    f153();
+    f154();
+    f155();
+    f156();
+    f157();
+    f158();
+    f159();
+    f160();
+    f161();
+    f162();
+    f163();
+    f164();
+    f165();
+    f166();
+    f167();
+    f168();
+    f169();
+    f170();
+    f171();
+    f172();
+    f173();
+    f174();
+    f175();
+    f176();
+    f177();
+    f178();
+    f179();
+    f180();
+    f181();
+    f182();
+    f183();
+    f184();
+    f185();
+    f186();
+    f187();
+    f188();
+    f189();
+    f190();
+    f191();
+    f192();
+    f193();
+    f194();
+    f195();
+    f196();
+    f197();
+    f198();
+    f199();
 
 
     return 0;

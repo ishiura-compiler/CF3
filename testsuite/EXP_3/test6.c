@@ -1,90 +1,100 @@
+
+/*
+CF3
+
+Copyright (c) 2015 ishiura-lab.
+
+Released under the MIT license.  
+https://github.com/ishiura-compiler/CF3/MIT-LICENSE.md
+*/
+
 #include<stdio.h>
 #include<stdint.h>
 #include<stdlib.h>
 #include"test1.h"
 
-static volatile uint32_t x178 = 157790U;
-static volatile int64_t t2 = 96911125285347909LL;
-static volatile int16_t x306 = INT16_MIN;
-volatile uint64_t t3 = 37394747LLU;
-static volatile uint64_t x646 = UINT64_MAX;
+static volatile int64_t x107 = 1LL;
+static volatile uint8_t x108 = 9U;
+uint16_t x249 = 835U;
+int8_t x251 = 29;
+static int16_t x680 = 5;
 
 
 void f0(void) {
-	static int64_t x177 = -1LL;
-	int8_t x179 = 2;
-	int16_t x180 = -1;
-	int64_t t0 = -1758529747656LL;
+    	static volatile uint8_t x105 = 0U;
+	uint16_t x106 = 1189U;
+	int32_t t0 = 0;
 
-	t0 = ((x177+x178)<<(x179+x180));
+    t0 = ((x105+x106)<<(x107+x108));
 
-	if (t0 != 315578LL) { NG(); } else { ; }
+    if (t0 != 1217536) { NG(); } else { ; }
 	
 }
 
 void f1(void) {
-	int8_t x221 = INT8_MIN;
-	int16_t x222 = 1190;
-	uint64_t x223 = UINT64_MAX;
-	uint8_t x224 = 5U;
-	int32_t t1 = -608168;
+    	int64_t x250 = -1LL;
+	int8_t x252 = 0;
+	volatile int64_t t1 = 853928127718627365LL;
 
-	t1 = ((x221+x222)<<(x223+x224));
+    t1 = ((x249+x250)<<(x251+x252));
 
-	if (t1 != 16992) { NG(); } else { ; }
+    if (t1 != 447750340608LL) { NG(); } else { ; }
 	
 }
 
 void f2(void) {
-	volatile int8_t x241 = 58;
-	int64_t x242 = -1LL;
-	static int16_t x243 = -1;
-	uint32_t x244 = 2U;
+    	static uint64_t x429 = 202511127009016LLU;
+	uint64_t x430 = 31869914633LLU;
+	int32_t x431 = -1;
+	uint8_t x432 = 1U;
+	volatile uint64_t t2 = 9493LLU;
 
-	t2 = ((x241+x242)<<(x243+x244));
+    t2 = ((x429+x430)<<(x431+x432));
 
-	if (t2 != 114LL) { NG(); } else { ; }
+    if (t2 != 202542996923649LLU) { NG(); } else { ; }
 	
 }
 
 void f3(void) {
-	volatile uint64_t x305 = 51509275LLU;
-	volatile uint64_t x307 = UINT64_MAX;
-	int8_t x308 = 2;
+    	static uint64_t x589 = UINT64_MAX;
+	uint32_t x590 = 0U;
+	int8_t x591 = -1;
+	volatile uint8_t x592 = 17U;
+	uint64_t t3 = 16483LLU;
 
-	t3 = ((x305+x306)<<(x307+x308));
+    t3 = ((x589+x590)<<(x591+x592));
 
-	if (t3 != 102953014LLU) { NG(); } else { ; }
+    if (t3 != 18446744073709486080LLU) { NG(); } else { ; }
 	
 }
 
 void f4(void) {
-	int32_t x645 = INT32_MIN;
-	uint8_t x647 = 7U;
-	int64_t x648 = -1LL;
-	uint64_t t4 = 858022LLU;
+    	volatile uint64_t x677 = 5516487LLU;
+	static int64_t x678 = INT64_MAX;
+	int16_t x679 = -1;
+	volatile uint64_t t4 = 705186628LLU;
 
-	t4 = ((x645+x646)<<(x647+x648));
+    t4 = ((x677+x678)<<(x679+x680));
 
-	if (t4 != 18446743936270598080LLU) { NG(); } else { ; }
+    if (t4 != 88263776LLU) { NG(); } else { ; }
 	
 }
 
 void f5(void) {
-	volatile int8_t x741 = -1;
-	uint64_t x742 = UINT64_MAX;
-	static uint8_t x743 = 22U;
-	int8_t x744 = 5;
-	volatile uint64_t t5 = 3581LLU;
+    	static uint16_t x845 = 397U;
+	static uint64_t x846 = UINT64_MAX;
+	static int8_t x847 = 1;
+	static uint8_t x848 = 3U;
+	volatile uint64_t t5 = 111948295102561844LLU;
 
-	t5 = ((x741+x742)<<(x743+x744));
+    t5 = ((x845+x846)<<(x847+x848));
 
-	if (t5 != 18446744073441116160LLU) { NG(); } else { ; }
+    if (t5 != 6336LLU) { NG(); } else { ; }
 	
 }
 
 int main(void) {
-    f0();
+        f0();
     f1();
     f2();
     f3();
