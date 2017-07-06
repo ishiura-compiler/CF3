@@ -26,7 +26,7 @@ A perl simple script to run all c test programs is included in the package.
 ## BIBLIOGRAPHY
 Y. Hibino and N. Ishiura: "CF3: Test suite for arithmetic optimization of C compilers," Technical Report of IEICE, VLD2013-133, (Jan. 2015).([pdf](http://ist.ksc.kwansei.ac.jp/~ishiura/publications/T2015-01a.pdf) )(in Japanese)
 
-##AUTHORS
+## AUTHORS
 Ishiura Lab. <ishiura-compiler@ml.kwansei.ac.jp>
 
 Mr. Hirofumi Ikeo  
